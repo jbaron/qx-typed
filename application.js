@@ -1,3 +1,9 @@
+var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
 /**
 * Create a button
 */
@@ -143,6 +149,19 @@ function createTree() {
 }
 
 /**
+* Simple class extension example
+*/
+var MyPage = (function (_super) {
+    __extends(MyPage, _super);
+    function MyPage(name) {
+        _super.call(this, name);
+        this.setLayout(new qx.ui.layout.Flow());
+        this.setShowCloseButton(true);
+    }
+    return MyPage;
+})(qx.ui.tabview.Page);
+
+/**
 * This is the main function that will be called from the Qooxdoo application
 * to start everything.
 */
@@ -156,12 +175,12 @@ function qooxdooMain(app) {
     var t = new qx.ui.tabview.TabView();
 
     for (var x = 0; x < demo.length; x++) {
-        var p = new qx.ui.tabview.Page(demo[x].name);
-        p.setLayout(new qx.ui.layout.Flow());
-        p.setShowCloseButton(true);
+        var p = new MyPage(demo[x].name);
         p.add(demo[x]());
         t.add(p);
     }
 
-    doc.add(t);
+    doc.add(t, { edge: 0 });
 }
+
+qx.registry.registerMainMethod(qooxdooMain);

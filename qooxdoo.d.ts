@@ -1,5 +1,9 @@
 interface IMap { [key: string]: any; }
 declare class ErrorImpl implements Error { name: string; message: string }
+declare module qx { 
+    var registry: any;
+}
+
 declare module qx.ui.basic {
     class Atom extends qx.ui.core.Widget {
         constructor(label: string, icon?: string);
@@ -6489,7 +6493,7 @@ declare module qx.ui.tabview {
 }
 declare module qx.ui.toolbar {
     class Button extends qx.ui.form.Button {
-        constructor(label: any, icon: any, command: any);
+        constructor(label: any, icon?: any, command?: any);
     }
 }
 declare module qx.ui.toolbar {
@@ -8361,7 +8365,7 @@ declare module qx.core {
         _disposeMap(field: string): void;
         _disposeObjects(varargs: any): void;
         _disposeSingletonObjects(varargs: any): void;
-        base(args: any, varargs: any): any;
+        base(args: any, varargs?: any): any;
         clone(): qx.core.Object;
         dispose(): void;
         getUserData(key: string): any;

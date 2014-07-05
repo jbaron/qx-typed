@@ -143,6 +143,18 @@ function createTree(): qx.ui.core.Widget {
 
 
 /**
+ * Simple class extension example
+ */ 
+class MyPage extends qx.ui.tabview.Page {
+    constructor(name) {
+        super(name);
+        this.setLayout(new qx.ui.layout.Flow());
+        this.setShowCloseButton(true);
+    }
+    
+}
+
+/**
  * This is the main function that will be called from the Qooxdoo application
  * to start everything.
  */ 
@@ -157,15 +169,13 @@ function qooxdooMain(app: qx.application.Standalone) {
 
     //And now lets add some tabs
     for (var x = 0; x < demo.length; x++) {
-        var p = new qx.ui.tabview.Page((<any>demo[x]).name);
-        p.setLayout(new qx.ui.layout.Flow());
-        p.setShowCloseButton(true);
+        var p = new MyPage((<any>demo[x]).name);
         p.add(demo[x]());
         t.add(p);
     }
 
-    doc.add(t);
+    doc.add(t,{ edge: 0});
 
 }
 
-
+qx.registry.registerMainMethod(qooxdooMain);

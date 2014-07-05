@@ -19,13 +19,18 @@ How to get started
 
 All you really need to do is implement a function with the following signature: 
 
-    qooxdooMain(app: qx.application.Standolone): void
+    someFunctionName(app: qx.application.Standolone): void
+
+and then register it:
+
+    qx.registry.registerMainMethod(someFunctionName);
 
 Within this function you can use all the Qooxdoo widgets you like and it is behaves 
 just like a normal Qooxdoo application. The benefit is that because of TypeScript and 
 CATS you get all kind of benefits like codecompletion, type checking and easy navigation.
 
-Use the provided test application as an example to see how to create some simple widgets.
+You can use the provided test application (application.ts) as an example to see how to 
+create some simple widgets.
 
 
 Background
