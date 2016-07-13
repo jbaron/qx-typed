@@ -1,8 +1,7 @@
-var __extends = this.__extends || function (d, b) {
+var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 /**
  * Create a button
@@ -134,7 +133,7 @@ var MyPage = (function (_super) {
         this.setShowCloseButton(true);
     }
     return MyPage;
-})(qx.ui.tabview.Page);
+}(qx.ui.tabview.Page));
 /**
  * This is the main function that will be called from the Qooxdoo application
  * to start everything.
@@ -145,6 +144,7 @@ function qooxdooMain(app) {
     var doc = app.getRoot();
     // Lets create the container for the tabs
     var t = new qx.ui.tabview.TabView();
+    //And now lets add some tabs
     for (var x = 0; x < demo.length; x++) {
         var p = new MyPage(demo[x].name);
         p.add(demo[x]());
