@@ -30,19 +30,17 @@ just like a normal Qooxdoo application. The benefit is that because of TypeScrip
 CATS you get all kind of benefits like codecompletion, type checking and easy navigation.
 
 You can use the provided test application (application.ts) as an example to see how to 
-create some simple widgets.
+create some simple widgets. For more examples you can always check the CATS editor itself.
 
 
 Background
 ==========
 
-For the CATS editor, I wwanted to validate if Qooxdoo would be a good fit. So can Qooxdoo be used from 
-TypeScript and having the best of both worlds: a proven set of widgets I was looking for with the 
-strong typing that TypeScript brings to the table.
+For the CATS editor, I wanted to validate if Qooxdoo would be a good fit. So can Qooxdoo be used with 
+TypeScript and having the best of both worlds: a proven set of widgets with the strong typing that TypeScript brings to the table.
 
-Additional I wanted to be able to use CATS to develop CATS without habing to use the normal Qooxdoo tooling set (generate.py stuff)
+Additional I wanted to be able to use CATS to develop CATS without having to use the normal Qooxdoo tooling set (generate.py stuff)
 
-Although not reach a final decision yet, the first few attempts look promising.
 
 
 License
