@@ -14,6 +14,9 @@ The easiest way is to try it out and get started is:
 From there on it feels very much like a tradditional Java or C# development cycle. 
 Change the code, compile, run.
 
+Right now this build and tested using Qooxdoo 5.0.1 and TypeScript 1.8.
+
+
 How to get started
 ==================
 
