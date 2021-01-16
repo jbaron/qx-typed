@@ -54,4 +54,11 @@ See also qooxdoo.org for more details.
 
 For the remaining part the Apache License is applicable (mainly the qooxdoo.d.ts file).
 
+Donate
+======
+
+Donation are always welcome. Please use the link below to make a donation:
+
+[<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">](https://www.paypal.com/donate?hosted_button_id=F3C9FR5DVXNVW)
+
 
