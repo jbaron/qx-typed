@@ -57,8 +57,10 @@ For the remaining part the Apache License is applicable (mainly the qooxdoo.d.ts
 Donate
 ======
 
-Donation are always welcome. Please use the link below to make a donation:
+Donations are very welcome. Please use the link below to make a donation:
 
 [<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">](https://www.paypal.com/donate?hosted_button_id=F3C9FR5DVXNVW)
+
+And let us know is you  or your company want to be listed as a sponsor.
 
 
