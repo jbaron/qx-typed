@@ -59,7 +59,7 @@ Donate
 
 Donations are very welcome. Please use the link below to make a donation:
 
-[<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">](https://www.paypal.com/donate?hosted_button_id=F3C9FR5DVXNVW)
+[<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">](https://www.paypal.com/donate/?hosted_button_id=725MCH6K8GHKG)
 
 And let us know is you  or your company want to be listed as a sponsor.
 
