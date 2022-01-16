@@ -61,11 +61,12 @@ Donations are very welcome. Using the link below, you can make a one-time or rec
 
 [Sponsor this project](https://github.com/sponsors/jbaron?o=sd&sc=t) 
 
+And let us know if you or your company would like to be listed as a sponsor.
 
-Or use 
+And if you don't want to use GitHub Sponsorship, you can use PayPal:
 
 [<img src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif">](https://www.paypal.com/donate/?hosted_button_id=725MCH6K8GHKG)
 
-And let us know if you or your company would like to be listed as a sponsor.
+
 
 
