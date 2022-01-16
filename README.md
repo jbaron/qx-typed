@@ -59,7 +59,7 @@ Donate
 
 Donations are very welcome. Please use the link below to make a donation:
 
-<button onclick="window.location.href='https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif';" value="Sponsor Project" />
+[Sponsor this project](https://github.com/sponsors/jbaron?o=sd&sc=t) 
 
 
 Or use 
