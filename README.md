@@ -57,7 +57,7 @@ For the remaining part the Apache License is applicable (mainly the qooxdoo.d.ts
 Donate
 ======
 
-Donations are very welcome. Please use the link below to make a donation:
+Donations are very welcome. Using the link below, you can make a one-time or recurring donation:
 
 [Sponsor this project](https://github.com/sponsors/jbaron?o=sd&sc=t) 
 
@@ -66,6 +66,6 @@ Or use
 
 [<img src="https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif">](https://www.paypal.com/donate/?hosted_button_id=725MCH6K8GHKG)
 
-And let us know is you  or your company want to be listed as a sponsor.
+And let us know if you or your company would like to be listed as a sponsor.
 
 
