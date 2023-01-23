@@ -1,1 +1,9 @@
-{}
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target" : "ES6",
+        "preserveConstEnums": true,
+        "outDir": "lib/"
+    },
+    "include": ["src/**/*"]
+}

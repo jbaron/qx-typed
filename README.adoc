@@ -2,27 +2,16 @@
 :icons: font
 
 == Introduction
-This is a small test application that demonstrates how you can easily use Qooxdoo from
+This is a small test application that demonstrates how you can easily use qooxdoo from
 a TypeScript project. This application can also serve as a template to build your own application.
 
 The easiest way is to try it out and get started is:
 
-* Download this application
-* Download the CATS editor, specially designed for developing with TypeScript.
- You can get it from https://github.com/jbaron/cats
-* Open this application folder as a project in CATS.
-
-From there on it feels very much like a traditional Java or C# development cycle.
-Change the code, compile, run.
-
-Right now this build and tested using Qooxdoo 5.0.1 and TypeScript 1.8.
-
 == How to get started
-
 All you really need to do is implement a function with the following signature: 
 
 ----
-someFunctionName(app: qx.application.Standolone): void
+someFunctionName(app: qx.application.Standalone): void
 ----
 
 and then register it:
@@ -31,31 +20,25 @@ and then register it:
 qx.registry.registerMainMethod(someFunctionName);
 ----
 
-Within this function you can use all the Qooxdoo widgets you like and it is behaves
-just like a normal Qooxdoo application. The benefit is that because of TypeScript and
-CATS you get all kind of benefits like code completion, type checking and easy navigation.
+Within this function you can use all the qooxdoo widgets you like and it is behaves just like a normal qooxdoo application. The benefit is that because of TypeScript you get all kind of benefits like code completion, type checking and easy navigation.
+You can use the provided application (application.ts) as an template to see how to create some simple widgets. 
 
-You can use the provided test application (application.ts) as an example to see how to
-create some simple widgets. For more examples you can always check the CATS editor itself.
 
-== Background
-
-For the CATS editor, I wanted to validate if Qooxdoo would be a good fit. So can Qooxdoo be used with
-TypeScript and having the best of both worlds: a proven set of widgets with the strong typing that TypeScript brings to the table.
-
-Additional I wanted to be able to use CATS to develop CATS without having to use the normal Qooxdoo tooling set (generate.py stuff)
+To compile your code after editing (assuming you have installed TypeScript) and then see your application in action, use the following two commands:
+----
+tsc
+npx http-server
+----
 
 == License
-
-This application uses much of Qooxdoo and for those part the same license applies as Qooxdoo. So either LGPL or EPL.
+This application uses much of qooxdoo and for those part the same license applies as qooxdoo. So either LGPL or EPL.
 See also qooxdoo.org for more details.
 
 For the remaining part the Apache License is applicable (mainly the qooxdoo.d.ts file).
 
 == Donate
-
 Donations are very welcome. Using the link below, you can make a one-time or recurring donation:
 
 image:https://img.shields.io/badge/Sponsor_this_Project-blue.svg?style=for-the-badge&logo=githubsponsors[link=https://github.com/sponsors/jbaron?o=sd&sc=t]
 
-And let us know if you or your company would like to be listed as a sponsor. And if you don't want to use GitHub Sponsorship, you can use this https://www.paypal.com/donate/?hosted_button_id=725MCH6K8GHKG[PayPal Link] instead.
+And let us know if you or your company would like to be listed as a sponsor.

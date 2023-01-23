@@ -1,6 +1,9 @@
 {
   "name": "base",
   "version": "5.0.1",
-  "main" : "index.html",	
-  "repository" : {}
+  "main": "index.html",
+  "repository": {},
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
 }
