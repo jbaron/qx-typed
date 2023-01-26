@@ -1,4 +1,4 @@
-// Generated declaration file at Thu Jan 26 2023 00:11:33 GMT+0100 (Central European Standard Time)
+// Generated declaration file at Thu Jan 26 2023 09:49:23 GMT+0100 (Central European Standard Time)
 
 interface IMap {
     [key: string]: any;
@@ -1008,43 +1008,43 @@ declare module qx.ui.treevirtual.pane {
 }
 declare module qx.ui.treevirtual {
     class MNode {
-        nodeGet(nodeReference: {} | null): {};
-        nodeToggleOpened(nodeReference: {} | null): void;
-        nodeSetState(nodeReference: {} | null, attributes: IMap): void;
-        nodeSetLabel(nodeReference: {} | null, label: string): void;
-        nodeGetLabel(nodeReference: {} | null): string;
-        nodeSetSelected(nodeReference: {} | null, b: boolean): void;
-        nodeGetSelected(nodeReference: {} | null): boolean;
+        nodeGet(nodeReference: {} | number): {};
+        nodeToggleOpened(nodeReference: {} | number): void;
+        nodeSetState(nodeReference: {} | number, attributes: IMap): void;
+        nodeSetLabel(nodeReference: {} | number, label: string): void;
+        nodeGetLabel(nodeReference: {} | number): string;
+        nodeSetSelected(nodeReference: {} | number, b: boolean): void;
+        nodeGetSelected(nodeReference: {} | number): boolean;
         nodeOpenAll(): void;
         nodeCloseAll(): void;
-        protected _nodeSetOpenedInternal(nodeReference: {} | null, opened: boolean, cascade: boolean, isRecursed?: boolean): void;
-        nodeSetOpened(nodeReference: {} | null, opened: boolean, cascade: boolean): void;
-        nodeGetOpened(nodeReference: {} | null): boolean;
-        nodeSetHideOpenClose(nodeReference: {} | null, b: boolean): void;
-        nodeGetHideOpenClose(nodeReference: {} | null): boolean;
-        nodeSetIcon(nodeReference: {} | null, path: string): void;
-        nodeGetIcon(nodeReference: {} | null): string;
-        nodeSetSelectedIcon(nodeReference: {} | null, path: string): void;
-        nodeGetSelectedIcon(nodeReference: {} | null): string;
-        nodeSetCellStyle(nodeReference: {} | null, style: string): void;
-        nodeGetCellStyle(nodeReference: {} | null): string;
-        nodeSetLabelStyle(nodeReference: {} | null, style: string): void;
-        nodeGetLabelStyle(nodeReference: {} | null): string;
+        protected _nodeSetOpenedInternal(nodeReference: {} | number, opened: boolean, cascade: boolean, isRecursed?: boolean): void;
+        nodeSetOpened(nodeReference: {} | number, opened: boolean, cascade: boolean): void;
+        nodeGetOpened(nodeReference: {} | number): boolean;
+        nodeSetHideOpenClose(nodeReference: {} | number, b: boolean): void;
+        nodeGetHideOpenClose(nodeReference: {} | number): boolean;
+        nodeSetIcon(nodeReference: {} | number, path: string): void;
+        nodeGetIcon(nodeReference: {} | number): string;
+        nodeSetSelectedIcon(nodeReference: {} | number, path: string): void;
+        nodeGetSelectedIcon(nodeReference: {} | number): string;
+        nodeSetCellStyle(nodeReference: {} | number, style: string): void;
+        nodeGetCellStyle(nodeReference: {} | number): string;
+        nodeSetLabelStyle(nodeReference: {} | number, style: string): void;
+        nodeGetLabelStyle(nodeReference: {} | number): string;
 
     }
 }
 declare module qx.ui.treevirtual {
     class MFamily {
-        familyGetFirstChild(nodeReference: {} | null): number;
-        familyGetLastChild(nodeReference: {} | null): number;
-        familyGetNextSibling(nodeReference: {} | null): number;
-        familyGetPrevSibling(nodeReference: {} | null): number;
+        familyGetFirstChild(nodeReference: {} | number): number;
+        familyGetLastChild(nodeReference: {} | number): number;
+        familyGetNextSibling(nodeReference: {} | number): number;
+        familyGetPrevSibling(nodeReference: {} | number): number;
 
     }
 }
 declare module qx.ui.treevirtual {
     class TreeVirtual extends qx.ui.table.Table {
-        constructor(headings?: qx.data.Array | null, custom?: IMap);
+        constructor(headings?: qx.data.Array | string, custom?: IMap);
         getDataModel(): qx.ui.table.ITableModel;
         setUseTreeLines(b: boolean): void;
         getUseTreeLines(): boolean;
@@ -1055,7 +1055,7 @@ declare module qx.ui.treevirtual {
         getOpenCloseButtonPosition(): {};
         setSelectionMode(mode: number): void;
         getSelectionMode(): number;
-        getHierarchy(nodeReference: {} | null): qx.data.Array;
+        getHierarchy(nodeReference: {} | number): qx.data.Array;
         getSelectedNodes(): qx.data.Array;
         protected _calculateSelectedNodes(): qx.data.Array;
         setOverflow(...args: string[]): void;
@@ -1072,7 +1072,7 @@ declare module qx.ui.treevirtual {
 }
 declare module qx.ui.treevirtual {
     class MTreePrimitive {
-        protected static _addNode(nodeArr: qx.data.Array | null, parentNodeId: number, label: string, bOpened: boolean, bHideOpenCloseButton: boolean, type: number, icon: string, iconSelected: string, nodeId?: number): number;
+        protected static _addNode(nodeArr: qx.data.Array | IMap, parentNodeId: number, label: string, bOpened: boolean, bHideOpenCloseButton: boolean, type: number, icon: string, iconSelected: string, nodeId?: number): number;
         protected static _getEmptyTree(): IMap;
 
     }
@@ -1088,14 +1088,14 @@ declare module qx.ui.treevirtual {
         getNode(rowIndex: number): {};
         addBranch(parentNodeId: number, label: string, bOpened: boolean, bHideOpenCloseButton: boolean, icon: string, iconSelected: string): number;
         addLeaf(parentNodeId: number, label: string, icon: string, iconSelected: string): number;
-        prune(nodeReference: {} | null, bSelfAlso: boolean): void;
-        move(moveNodeReference: {} | null, parentNodeReference: {} | null): void;
+        prune(nodeReference: {} | number, bSelfAlso: boolean): void;
+        move(moveNodeReference: {} | number, parentNodeReference: {} | number): void;
         setData(nodeArr?: qx.data.Array): void;
         getData(): qx.data.Array;
         clearData(): void;
         setColumnData(nodeId: number, columnIndex: number, data: any): void;
         getColumnData(nodeId: number, columnIndex: number): any;
-        setState(nodeReference: {} | null, attributes: IMap, suppressRedraw: boolean): void;
+        setState(nodeReference: {} | number, attributes: IMap, suppressRedraw: boolean): void;
         getNodeRowMap(): qx.data.Array;
         getRowFromNodeId(nodeId: number): number;
         getNodeFromRow(rowIndex: number): {};
@@ -1530,7 +1530,7 @@ declare module qx.ui.form.core {
         protected _isModifierPressed(event: qx.event.type.KeySequence): boolean;
         protected _onBlur(event: qx.event.type.Focus): void;
         protected _handleKeyboard(event: qx.event.type.KeySequence): void;
-        protected _handlePointer(event: qx.event.type.Pointer | null): void;
+        protected _handlePointer(event: qx.event.type.Pointer | qx.event.type.Roll): void;
         protected _onResize(event: qx.event.type.Data): void;
         protected _onPopupChangeVisibility(event: qx.event.type.Data): void;
         protected _applyModel(): void;
@@ -2464,7 +2464,7 @@ declare module qx.ui.form {
 }
 declare module qx.ui.form {
     class Form extends qx.core.Object {
-        add(item: qx.ui.form.IForm, label: string, validator?: Function | null, name?: string, validatorContext?: any, options?: IMap): void;
+        add(item: qx.ui.form.IForm, label: string, validator?: Function | qx.ui.form.validation.AsyncValidator, name?: string, validatorContext?: any, options?: IMap): void;
         addGroupHeader(title: string, options?: IMap): void;
         addButton(button: qx.ui.form.Button, options?: IMap): void;
         remove(item: qx.ui.form.IForm): boolean;
@@ -2505,7 +2505,7 @@ declare module qx.ui.form.validation {
 }
 declare module qx.ui.form.validation {
     class Manager extends qx.core.Object {
-        add(formItem: qx.ui.core.Widget, validator: Function | null, context?: any): void;
+        add(formItem: qx.ui.core.Widget, validator: Function | qx.ui.form.validation.AsyncValidator, context?: any): void;
         remove(formItem: qx.ui.core.Widget): qx.ui.core.Widget | null;
         getItems(): qx.data.Array;
         validate(): boolean | undefined;
@@ -3102,7 +3102,7 @@ declare module qx.ui.core {
     class ColumnData extends qx.ui.core.LayoutItem {
         getComputedWidth(): number;
         getFlex(): number;
-        setColumnWidth(width: number | null, flex?: number): void;
+        setColumnWidth(width: number | string, flex?: number): void;
 
     }
 }
@@ -3315,7 +3315,7 @@ declare module qx.ui.core {
 }
 declare module qx.ui.core {
     class MMultiSelectionHandling {
-        setValue(items: null | null): null | TypeError;
+        setValue(items: null | qx.ui.core.Widget): null | TypeError;
         getValue(): qx.ui.core.Widget[];
         resetValue(): void;
         selectAll(): void;
@@ -3580,7 +3580,7 @@ declare module qx.ui.core {
 }
 declare module qx.ui.core {
     class MSingleSelectionHandling {
-        setValue(item: null | null): null | TypeError;
+        setValue(item: null | qx.ui.core.Widget): null | TypeError;
         getValue(): null | qx.ui.core.Widget;
         resetValue(): void;
         getSelection(): qx.ui.core.Widget[];
@@ -3597,7 +3597,7 @@ declare module qx.ui.core {
     class LayoutItem extends qx.core.Object {
         getBounds(): IMap | null;
         clearSeparators(): void;
-        renderSeparator(separator: string | null, bounds: IMap): void;
+        renderSeparator(separator: string | qx.ui.decoration.IDecorator, bounds: IMap): void;
         renderLayout(left: number, top: number, width: number, height: number): IMap;
         isExcluded(): boolean;
         hasValidLayout(): boolean;
@@ -3902,7 +3902,7 @@ declare module qx.ui.embed {
 }
 declare module qx.ui.layout {
     class Dock extends qx.ui.layout.Abstract {
-        constructor(spacingX?: number, spacingY?: number, separatorX?: string | null, separatorY?: string | null);
+        constructor(spacingX?: number, spacingY?: number, separatorX?: string | qx.ui.decoration.IDecorator, separatorY?: string | qx.ui.decoration.IDecorator);
         protected _applySort(): void;
         protected _getSeparatorWidths(): IMap;
         getSort(): any;
@@ -4020,7 +4020,7 @@ declare module qx.ui.layout {
 }
 declare module qx.ui.layout {
     class VBox extends qx.ui.layout.Abstract {
-        constructor(spacing?: number, alignY?: string, separator?: string | null);
+        constructor(spacing?: number, alignY?: string, separator?: string | qx.ui.decoration.IDecorator);
         protected _applyReversed(): void;
         getAlignY(): any;
         setAlignY(value: any): void;
@@ -4049,8 +4049,8 @@ declare module qx.ui.layout {
         static collapseMargins(...varargs: any[]): number;
         static computeHorizontalGaps(children: qx.data.Array, spacing?: number, collapse?: boolean): number;
         static computeVerticalGaps(children: qx.data.Array, spacing?: number, collapse?: boolean): number;
-        static computeHorizontalSeparatorGaps(children: qx.ui.core.LayoutItem[], spacing: number, separator: string | null): number;
-        static computeVerticalSeparatorGaps(children: qx.ui.core.LayoutItem[], spacing: number, separator: string | null): number;
+        static computeHorizontalSeparatorGaps(children: qx.ui.core.LayoutItem[], spacing: number, separator: string | qx.ui.decoration.IDecorator): number;
+        static computeVerticalSeparatorGaps(children: qx.ui.core.LayoutItem[], spacing: number, separator: string | qx.ui.decoration.IDecorator): number;
         static arrangeIdeals(beginMin: number, beginIdeal: number, beginMax: number, endMin: number, endIdeal: number, endMax: number): IMap;
 
     }
@@ -4065,7 +4065,7 @@ declare module qx.ui.layout {
         protected _computeSizeHint(): IMap;
         invalidateChildrenCache(): void;
         protected _clearSeparators(): void;
-        protected _renderSeparator(separator: string | null, bounds: IMap): void;
+        protected _renderSeparator(separator: string | qx.ui.decoration.IDecorator, bounds: IMap): void;
         connectToWidget(widget: qx.ui.core.Widget): void;
         protected _getWidget(): qx.ui.core.Widget;
         protected _applyLayoutChange(): void;
@@ -4075,7 +4075,7 @@ declare module qx.ui.layout {
 }
 declare module qx.ui.layout {
     class HBox extends qx.ui.layout.Abstract {
-        constructor(spacing?: number, alignX?: string, separator?: string | null);
+        constructor(spacing?: number, alignX?: string, separator?: string | qx.ui.decoration.IDecorator);
         protected _applyReversed(): void;
         getAlignX(): any;
         setAlignX(value: any): void;
@@ -4380,7 +4380,7 @@ declare module qx.ui.tabview {
         setContentPadding(...args: number[]): void;
         resetContentPadding(): void;
         constructor(barPosition?: string);
-        setValue(item: null | null): null | TypeError;
+        setValue(item: null | qx.ui.tabview.Page): null | TypeError;
         getValue(): null | qx.ui.tabview.Page;
         resetValue(): void;
         protected _createRadioGroupInstance(): qx.ui.form.RadioGroup;
@@ -4596,7 +4596,7 @@ declare module qx.ui.progressive.renderer.table {
     class Widths extends qx.core.Object {
         constructor(numColumns?: number);
         getData(): qx.data.Array;
-        setWidth(column: number, width: number | null): void;
+        setWidth(column: number, width: number | string): void;
         setMinWidth(column: number, width: number): void;
         setMaxWidth(column: number, width: number): void;
 
@@ -5104,7 +5104,7 @@ declare module qx.ui.table.columnmodel.resizebehavior {
 }
 declare module qx.ui.table.columnmodel.resizebehavior {
     class Default extends qx.ui.table.columnmodel.resizebehavior.Abstract {
-        setWidth(col: number, width: number | null, flex?: number): void;
+        setWidth(col: number, width: number | string, flex?: number): void;
         setMinWidth(col: number, width: number): void;
         setMaxWidth(col: number, width: number): void;
         getLayoutChildren(): qx.ui.core.ColumnData[];
@@ -5570,7 +5570,7 @@ declare module qx.ui.table.model {
         setEditable(editable: boolean): void;
         setColumnEditable(columnIndex: number, editable: boolean): void;
         setColumnSortable(columnIndex: number, sortable: boolean): void;
-        setSortMethods(columnIndex: number, compare: Function | null): void;
+        setSortMethods(columnIndex: number, compare: Function | IMap): void;
         getSortMethods(columnIndex: number): IMap;
         clearSorting(): void;
         protected _setSortColumnIndex(columnIndex: number): void;
@@ -5867,11 +5867,11 @@ declare module qx.ui.mobile.page {
         protected _createHideMasterButton(): qx.ui.mobile.navigationbar.Button;
         protected _createMasterNavigation(): qx.ui.mobile.container.Navigation;
         protected _createDetailNavigation(): qx.ui.mobile.container.Navigation;
-        addMaster(pages: any | null): void;
-        addDetail(pages: any | null): void;
+        addMaster(pages: qx.ui.mobile.page.NavigationPage | qx.ui.mobile.page.NavigationPage): void;
+        addDetail(pages: qx.ui.mobile.page.NavigationPage | qx.ui.mobile.page.NavigationPage): void;
         protected _onDetailPageStart(evt: qx.event.type.Event): void;
         protected _onMasterPageStart(evt: qx.event.type.Event): void;
-        protected _add(pages: any | null, target: qx.ui.mobile.container.Navigation): void;
+        protected _add(pages: qx.ui.mobile.page.NavigationPage | qx.ui.mobile.page.NavigationPage, target: qx.ui.mobile.container.Navigation): void;
         protected _onMasterContainerUpdate(evt: qx.event.type.Data): void;
         protected _onDetailContainerUpdate(evt: qx.event.type.Data): void;
         protected _onMasterButtonTap(): void;
@@ -9230,7 +9230,7 @@ declare module qx.bom {
 declare module qx.bom {
     class Input {
         static create(type: qx.bom.String, attributes: IMap, win: Window): HTMLElement;
-        static setValue(element: HTMLElement, value: string | null): void;
+        static setValue(element: HTMLElement, value: string | number | qx.data.Array): void;
         static getValue(element: HTMLElement): string | qx.data.Array;
 
     }
@@ -9312,8 +9312,8 @@ declare module qx.bom.element {
 }
 declare module qx.bom.element {
     class Background {
-        static compile(source?: string, repeat?: string, left?: number | null, top?: number | null): string;
-        static getStyles(source: string, repeat?: string, left?: number | null, top?: number | null): IMap;
+        static compile(source?: string, repeat?: string, left?: number | string, top?: number | string): string;
+        static getStyles(source: string, repeat?: string, left?: number | string, top?: number | string): IMap;
         static set(element: HTMLElement, source?: string, repeat?: string, left?: number, top?: number): void;
 
     }
@@ -9422,10 +9422,10 @@ declare module qx.bom.element {
 declare module qx.bom.element {
     class Transform {
         static transform(el: HTMLElement, transforms: IMap): void;
-        static translate(el: HTMLElement, value: string | null): void;
-        static scale(el: HTMLElement, value: number | null): void;
-        static rotate(el: HTMLElement, value: string | null): void;
-        static skew(el: HTMLElement, value: string | null): void;
+        static translate(el: HTMLElement, value: string | qx.data.Array): void;
+        static scale(el: HTMLElement, value: number | qx.data.Array): void;
+        static rotate(el: HTMLElement, value: string | qx.data.Array): void;
+        static skew(el: HTMLElement, value: string | qx.data.Array): void;
         static getCss(transforms: IMap): string;
         static setOrigin(el: HTMLElement, value: string): void;
         static getOrigin(el: HTMLElement): string;
@@ -9791,7 +9791,7 @@ declare module qx.bom.request {
         getUrl(): string;
         setMethod(method: string): qx.bom.request.SimpleXhr;
         getMethod(): string;
-        setRequestData(data: string | null): qx.bom.request.SimpleXhr;
+        setRequestData(data: string | {}): qx.bom.request.SimpleXhr;
         getRequestData(): string;
         getResponse(): string | null;
         getTransport(): {};
@@ -9809,7 +9809,7 @@ declare module qx.bom.request {
         protected _registerTransportListener(transport: qx.bom.request.IRequest): qx.bom.request.IRequest;
         protected _createResponseParser(): qx.util.ResponseParser;
         protected _setResponse(response: string): void;
-        protected _serializeData(data: string | null, contentType?: string): string | null;
+        protected _serializeData(data: string | IMap, contentType?: string): string | null;
         protected _onReadyStateChange(): void;
         protected _onLoadEnd(): void;
         protected _onAbort(): void;
@@ -9824,7 +9824,7 @@ declare module qx.bom.request {
         dispose(): void;
         open(method?: string, url?: string, async?: boolean, user?: string, password?: string): void;
         setRequestHeader(key: string, value: string): qx.bom.request.Xhr;
-        send(data?: string | null): qx.bom.request.Xhr;
+        send(data?: string | Document): qx.bom.request.Xhr;
         abort(): qx.bom.request.Xhr;
         protected _emit(event: string): void;
         onreadystatechange(): void;
@@ -9887,7 +9887,7 @@ declare module qx.bom.request {
 declare module qx.bom.request {
     interface IRequest {
         open(method: string, url: string, async?: boolean): void;
-        send(data?: string | null): void;
+        send(data?: string | Document): void;
         abort(): void;
         getAllResponseHeaders(): string;
         getResponseHeader(header: string): string;
@@ -9904,7 +9904,7 @@ declare module qx.bom.request {
 declare module qx.bom {
     class Html {
         static fixEmptyTags(html: qx.bom.String): qx.bom.String;
-        static clean(objs: any | null, context?: Document, fragment?: HTMLElement): HTMLElement[];
+        static clean(objs: HTMLElement | string, context?: Document, fragment?: HTMLElement): HTMLElement[];
         static extractScripts(elements: HTMLElement[], fragment?: Document): HTMLElement[];
 
     }
@@ -10281,7 +10281,7 @@ declare module qx.bom.rest {
         configureRequest(callback: Function): void;
         protected _getRequest(): qx.bom.request.SimpleXhr | qx.io.request.AbstractRequest;
         map(action: string, method: string, url: string, check?: IMap): void;
-        invoke(action: string, params: IMap, data: IMap | null): number;
+        invoke(action: string, params: IMap, data: IMap | string): number;
         setBaseUrl(baseUrl: string): void;
         abort(param0: any): void;
         refresh(action: string): void;
@@ -10363,7 +10363,7 @@ declare module qx.bom.media {
 declare module qx.core {
     class Aspect {
         static wrap(fullName: string, fcn: Function, type: string): Function;
-        static addAdvice(fcn: Function, position?: string, type?: string, name?: string | null): void;
+        static addAdvice(fcn: Function, position?: string, type?: string, name?: string | RegExp): void;
 
     }
 }
@@ -10376,7 +10376,7 @@ declare module qx.core {
         protected _createQxObject(id: string): qx.core.Object | null;
         protected _createQxObjectImpl(id: string): qx.core.Object | null;
         addOwnedQxObject(obj: qx.core.Object, id?: string): void;
-        removeOwnedQxObject(args: string | null): void;
+        removeOwnedQxObject(args: string | {}): void;
         getOwnedQxObjects(): qx.data.Array;
         getQxOwner(): qx.core.Object;
         setQxOwner(value: qx.core.Object): void;
@@ -10419,7 +10419,7 @@ declare module qx.core {
         assertArgumentsCount(args: any, minCount: number, maxCount: number, msg?: string): void;
         assertEventFired(obj: qx.core.Object, event: string, invokeFunc: Function, listener?: Function, msg?: string): void;
         assertEventNotFired(obj: qx.core.Object, event: string, invokeFunc: Function, msg?: string): void;
-        assertException(callback: Function, exception?: Error, re?: string | null, msg?: string): void;
+        assertException(callback: Function, exception?: Error, re?: string | RegExp, msg?: string): void;
         assertInArray(value: any, array: qx.data.Array, msg?: string): void;
         assertNotInArray(value: any, array: qx.data.Array, msg?: string): void;
         assertArrayEquals(expected: qx.data.Array, found: qx.data.Array, msg?: string): void;
@@ -10465,7 +10465,7 @@ declare module qx.core {
 }
 declare module qx.core {
     class MProperty {
-        set(data: {} | null, value?: any): this;
+        set(data: {} | string, value?: any): this;
         get(prop: string): any;
         reset(prop: string): void;
         isPropertyInitialized(prop: string): boolean;
@@ -10521,7 +10521,7 @@ declare module qx.core {
         fireNonBubblingEventAsync(type: string, clazz?: qx.Class, args?: qx.data.Array): qx.Promise;
         fireDataEvent(type: string, data: any, oldData?: any, cancelable?: boolean): boolean | qx.Promise;
         fireDataEventAsync(type: string, data: any, oldData?: any, cancelable?: boolean): qx.Promise;
-        set(data: {} | null, value?: any): this;
+        set(data: {} | string, value?: any): this;
         get(prop: string): any;
         reset(prop: string): void;
         isPropertyInitialized(prop: string): boolean;
@@ -10532,7 +10532,7 @@ declare module qx.core {
         protected _createQxObject(id: string): qx.core.Object | null;
         protected _createQxObjectImpl(id: string): qx.core.Object | null;
         addOwnedQxObject(obj: qx.core.Object, id?: string): void;
-        removeOwnedQxObject(args: string | null): void;
+        removeOwnedQxObject(args: string | {}): void;
         getOwnedQxObjects(): qx.data.Array;
         getQxOwner(): qx.core.Object;
         setQxOwner(value: qx.core.Object): void;
@@ -10559,7 +10559,7 @@ declare module qx.core {
         assertArgumentsCount(args: any, minCount: number, maxCount: number, msg?: string): void;
         assertEventFired(obj: qx.core.Object, event: string, invokeFunc: Function, listener?: Function, msg?: string): void;
         assertEventNotFired(obj: qx.core.Object, event: string, invokeFunc: Function, msg?: string): void;
-        assertException(callback: Function, exception?: Error, re?: string | null, msg?: string): void;
+        assertException(callback: Function, exception?: Error, re?: string | RegExp, msg?: string): void;
         assertInArray(value: any, array: qx.data.Array, msg?: string): void;
         assertNotInArray(value: any, array: qx.data.Array, msg?: string): void;
         assertArrayEquals(expected: qx.data.Array, found: qx.data.Array, msg?: string): void;
@@ -10619,11 +10619,11 @@ declare module qx.core {
         static assertNotNull(value: any, msg?: string): void;
         static assertNull(value: any, msg?: string): void;
         static assertJsonEquals(expected: any, found: any, msg?: string): void;
-        static assertMatch(str: string, re: string | null, msg?: string): void;
+        static assertMatch(str: string, re: string | RegExp, msg?: string): void;
         static assertArgumentsCount(args: any, minCount: number, maxCount: number, msg?: string): void;
         static assertEventFired(obj: qx.core.Object, event: string, invokeFunc: Function, listenerFunc?: Function, msg?: string): void;
         static assertEventNotFired(obj: qx.core.Object, event: string, invokeFunc: Function, msg?: string): void;
-        static assertException(callback: Function, exception?: Error, re?: string | null, msg?: string): void;
+        static assertException(callback: Function, exception?: Error, re?: string | RegExp, msg?: string): void;
         static assertInArray(value: any, array: qx.data.Array, msg?: string): void;
         static assertNotInArray(value: any, array: qx.data.Array, msg?: string): void;
         static assertArrayEquals(expected: qx.data.Array, found: qx.data.Array, msg?: string): void;
@@ -10684,7 +10684,7 @@ declare module qx.core {
         static getQxObject(id: string): qx.core.Object | null;
         static getAbsoluteIdOf(obj: qx.core.Object, suppressWarnings?: boolean): string;
         register(obj: qx.core.Object, id?: string): void;
-        unregister(data: {} | null): boolean;
+        unregister(data: {} | string): boolean;
         getRegisteredObjects(): qx.core.Object;
 
     }
@@ -10896,8 +10896,8 @@ declare module qx.util {
         static disposeArray(obj: {}, field: string): void;
         static disposeMap(obj: {}, field: string): void;
         static disposeTriggeredBy(disposeMe: {}, trigger: {}): void;
-        static destroyContainer(container: qx.ui.container.Composite | null): void;
-        protected static _collectContainerChildren(container: qx.ui.container.Composite | null, arr: qx.data.Array): void;
+        static destroyContainer(container: qx.ui.container.Composite | qx.ui.container.Scroll | qx.ui.container.SlideBar | qx.ui.container.Stack): void;
+        protected static _collectContainerChildren(container: qx.ui.container.Composite | qx.ui.container.Scroll | qx.ui.container.SlideBar | qx.ui.container.Stack, arr: qx.data.Array): void;
 
     }
 }
@@ -11048,15 +11048,15 @@ declare module qx.util {
         static adjust(color: string, scaleMap: IMap): string;
         static luminance(color: string): number;
         static contrast(back: string, front: string): number;
-        static chooseContrastingColor(rgb: any | null, threshold?: number, dark?: string, light?: string): string;
+        static chooseContrastingColor(rgb: number | string, threshold?: number, dark?: string, light?: string): string;
 
     }
 }
 declare module qx.util {
     class ResponseParser {
-        constructor(parser?: string | null);
+        constructor(parser?: string | Function);
         parse(response: string, contentType: string): string | {};
-        setParser(parser: string | null): qx.util.Function;
+        setParser(parser: string | Function): qx.util.Function;
         protected _getParser(param0: any): Function | null;
 
     }
@@ -11170,7 +11170,7 @@ declare module qx.module {
         getProperties(names: string[]): IMap;
         removeProperty(name: string): any;
         getValue(): string | string[];
-        setValue(value: string | null): any;
+        setValue(value: string | number | qx.data.Array): any;
 
     }
 }
@@ -11197,35 +11197,35 @@ declare module qx.module {
 }
 declare module qx.module {
     class Traversing {
-        static isElement(selector: {} | null): boolean;
-        static isNode(selector: Node | null): boolean;
-        static isNodeName(selector: Node | null, nodeName: string): boolean;
-        static isDocument(node: {} | null): boolean;
-        static isDocumentFragment(node: {} | null): boolean;
-        static getWindow(selector: Node | null): Window;
+        static isElement(selector: {} | string | any): boolean;
+        static isNode(selector: Node | string | any): boolean;
+        static isNodeName(selector: Node | string | any, nodeName: string): boolean;
+        static isDocument(node: {} | any): boolean;
+        static isDocumentFragment(node: {} | any): boolean;
+        static getWindow(selector: Node | Document | Window | string | any): Window;
         static isTextNode(obj: {}): boolean;
-        static isWindow(obj: {} | null): boolean;
-        static getDocument(selector: Node | null): Document | null;
-        static getNodeName(selector: Node | null): string;
-        static getNodeText(selector: Node | null): string;
-        static isBlockNode(selector: Node | null): boolean;
-        static equalNodes(node1: string | null, node2: string | null): boolean;
-        add(el: HTMLElement | null): any;
+        static isWindow(obj: {} | any): boolean;
+        static getDocument(selector: Node | string | any): Document | null;
+        static getNodeName(selector: Node | string | any): string;
+        static getNodeText(selector: Node | string | any): string;
+        static isBlockNode(selector: Node | string | any): boolean;
+        static equalNodes(node1: string | HTMLElement | HTMLElement | any, node2: string | HTMLElement | HTMLElement | any): boolean;
+        add(el: HTMLElement | any): any;
         getChildren(selector?: string): any;
         forEach(fn: Function, ctx: {}): any;
         getParents(selector?: string): any;
-        isChildOf(parent: any | null): boolean;
+        isChildOf(parent: any | string): boolean;
         getAncestors(filter?: string): any;
         getAncestorsUntil(selector: string, filter?: string): any;
         getClosest(selector: string): any;
         find(selector: string): any;
         getContents(): any;
-        is(selector: string | null): boolean;
+        is(selector: string | Function): boolean;
         eq(index: number): any;
         getFirst(): any;
         getLast(): any;
         has(selector: string): any;
-        contains(element: HTMLElement | null): any;
+        contains(element: HTMLElement | Window | HTMLElement | any): any;
         getNext(selector?: string): any;
         getNextAll(selector?: string): any;
         getNextUntil(selector?: string): any;
@@ -11233,7 +11233,7 @@ declare module qx.module {
         getPrevAll(selector?: string): any;
         getPrevUntil(selector?: string): any;
         getSiblings(selector?: string): any;
-        not(selector: string | null): any;
+        not(selector: string | Function): any;
         getOffsetParent(): any;
         isRendered(): boolean;
 
@@ -11257,8 +11257,8 @@ declare module qx.module {
         hasListener(type: string, listener?: Function, context?: {}): boolean;
         copyEventsTo(target: HTMLElement): void;
         hover(callbackIn: Function, callbackOut?: Function): any;
-        onMatchTarget(eventType: string, target: string | null, callback: Function, context?: {}): any;
-        offMatchTarget(eventType: string, target: string | null, callback: Function, context?: {}): any;
+        onMatchTarget(eventType: string, target: string | HTMLElement | HTMLElement | any, callback: Function, context?: {}): any;
+        offMatchTarget(eventType: string, target: string | HTMLElement | HTMLElement | any, callback: Function, context?: {}): any;
 
     }
 }
@@ -11292,17 +11292,17 @@ declare module qx.module {
 }
 declare module qx.module {
     class Manipulating {
-        static create(html: string | null, context?: Document): any;
+        static create(html: string | HTMLElement, context?: Document): any;
         clone(events: boolean): any;
-        append(html: string | null): any;
-        appendTo(parent: string | null): any;
-        insertBefore(target: string | null): any;
-        insertAfter(target: string | null): any;
-        wrap(wrapper: string | null): any;
+        append(html: string | HTMLElement | any): any;
+        appendTo(parent: string | HTMLElement | any): any;
+        insertBefore(target: string | HTMLElement | HTMLElement | any): any;
+        insertAfter(target: string | HTMLElement | HTMLElement | any): any;
+        wrap(wrapper: string | HTMLElement | HTMLElement | any): any;
         remove(): any;
         empty(): any;
-        before(content: string | null): any;
-        after(content: string | null): any;
+        before(content: string | string | HTMLElement | HTMLElement | any): any;
+        after(content: string | string | HTMLElement | HTMLElement | any): any;
         getScrollLeft(): number;
         getScrollTop(): number;
         setScrollLeft(value: number, duration?: number): any;
@@ -11354,10 +11354,10 @@ declare module qx.module {
 declare module qx.module.dev {
     class FakeServer {
         static configure(responseData: IMap[]): void;
-        static removeResponse(method: string, url: string | null): void;
+        static removeResponse(method: string, url: string | RegExp): void;
         static addFilter(filter: Function): void;
         static removeFilter(filter: Function): void;
-        static respondWith(method: string, urlRegExp: RegExp, response: Function | null): void;
+        static respondWith(method: string, urlRegExp: RegExp, response: Function | qx.data.Array | string): void;
         static getFakeServer(): {};
         static restore(): void;
 
@@ -11372,10 +11372,10 @@ declare module qx.module {
 declare module qx.module {
     class Transform {
         transform(transforms: IMap): any;
-        translate(value: string | null): any;
-        scale(value: number | null): any;
-        rotate(value: string | null): any;
-        skew(value: string | null): any;
+        translate(value: string | qx.data.Array): any;
+        scale(value: number | qx.data.Array): any;
+        rotate(value: string | qx.data.Array): any;
+        skew(value: string | qx.data.Array): any;
         setTransformOrigin(value: string): any;
         getTransformOrigin(): string;
         setTransformStyle(value: string): any;
@@ -11669,7 +11669,7 @@ declare module qx.io.transport {
         getEndpoint(): any;
         setEndpoint(value: any): void;
         resetEndpoint(): void;
-        constructor(windowOrWorker?: Window | null);
+        constructor(windowOrWorker?: Window | Worker);
         protected _createTransportImpl(): void;
 
     }
@@ -11752,7 +11752,7 @@ declare module qx.io.jsonrpc.protocol {
 }
 declare module qx.io.jsonrpc {
     class Client extends qx.io.transport.AbstractClient {
-        constructor(transportOrUri?: qx.io.transport.ITransport | null, methodPrefix?: string, parser?: qx.io.jsonrpc.protocol.Parser);
+        constructor(transportOrUri?: qx.io.transport.ITransport | string, methodPrefix?: string, parser?: qx.io.jsonrpc.protocol.Parser);
         protected _prependMethodPrefix(param0: any): string;
         protected _throwTransportException(exception: any): void;
         send(param0: any): qx.Promise;
@@ -11761,7 +11761,7 @@ declare module qx.io.jsonrpc {
         sendBatch(param0: any): qx.Promise;
         handleIncoming(json: string): void;
         protected _cleanup(param0: any): void;
-        handleMessage(message: qx.io.jsonrpc.protocol.Message | null): void;
+        handleMessage(message: qx.io.jsonrpc.protocol.Message | qx.io.jsonrpc.protocol.Batch): void;
         getMethodPrefix(): string;
         setMethodPrefix(value: string): void;
         resetMethodPrefix(): void;
@@ -11809,7 +11809,7 @@ declare module qx.io.graphql.protocol {
 }
 declare module qx.io.graphql {
     class Client extends qx.io.transport.AbstractClient {
-        constructor(transportOrUri?: qx.io.transport.ITransport | null);
+        constructor(transportOrUri?: qx.io.transport.ITransport | string);
         send(request: qx.io.graphql.protocol.Request): qx.Promise;
         protected _handleErrors(response: qx.io.graphql.protocol.Response): qx.io.exception.Protocol;
 
@@ -11875,7 +11875,7 @@ declare module qx.io.request {
         protected _onError(): void;
         protected _fireStatefulEvent(evt: string): void;
         protected _setPhase(phase: string): void;
-        protected _serializeData(data: string | null): string | null;
+        protected _serializeData(data: string | IMap | qx.core.Object): string | null;
         getUrl(): string;
         setUrl(value: string): void;
         resetUrl(): void;
@@ -11943,7 +11943,7 @@ declare module qx.io.part {
         getPackages(): qx.io.part.Package[];
         preload(callback: Function, self?: {}): void;
         load(callback: Function, self?: {}): void;
-        protected _appendPartListener(callback: Function, self?: {}, part?: qx.io.part.Part | null): void;
+        protected _appendPartListener(callback: Function, self?: {}, part?: qx.io.part.Part | qx.io.part.ClosurePart): void;
         protected _markAsCompleted(readyState: string): void;
         protected _signalStartup(): void;
         protected _checkCompleteLoading(callback: Function, self: {}): boolean;
@@ -11999,7 +11999,7 @@ declare module qx.io.rest {
         configureRequest(callback: Function): void;
         protected _getRequest(): qx.io.request.Xhr;
         map(action: string, method: string, url: string, check?: IMap): void;
-        invoke(action: string, params: IMap, data: IMap | null): number;
+        invoke(action: string, params: IMap, data: IMap | string): number;
         setBaseUrl(baseUrl: string): void;
         abort(param0: any): void;
         refresh(action: string): void;
@@ -12047,7 +12047,7 @@ declare module qx.html {
 declare module qx.html {
     class Factory extends qx.core.Object {
         static getInstance(): Factory;
-        registerFactory(tagName: string, factory: qx.Class | null): void;
+        registerFactory(tagName: string, factory: qx.Class | Function): void;
         createElement(tagName: string, attributes?: IMap): qx.html.Node;
 
     }
@@ -12255,7 +12255,7 @@ declare module qx.html {
 }
 declare module qx.xml {
     class Document {
-        static isXmlDocument(elem: Document | null): boolean;
+        static isXmlDocument(elem: Document | HTMLElement): boolean;
         static create(namespaceUri?: string, qualifiedName?: string): qx.xml.Document;
         static fromString(str: string): qx.xml.Document;
 
@@ -12298,9 +12298,9 @@ declare module qx.lang {
         static min(arr: number[]): any;
         static unique(arr: qx.lang.Array): qx.lang.Array;
         static range(start: number, stop: number, step: number): qx.lang.Array;
-        static replace(dest: qx.data.Array | null, src: qx.data.Array | null): qx.lang.Array;
-        static toNativeArray(src: qx.data.Array | null, param1: any): qx.lang.Array;
-        static toDataArray(src: qx.data.Array | null, param1: any): qx.lang.Array;
+        static replace(dest: qx.data.Array | qx.data.Array, src: qx.data.Array | qx.data.Array): qx.lang.Array;
+        static toNativeArray(src: qx.data.Array | qx.data.Array, param1: any): qx.lang.Array;
+        static toDataArray(src: qx.data.Array | qx.data.Array, param1: any): qx.lang.Array;
 
     }
 }
@@ -12460,7 +12460,7 @@ declare module qx.type {
 }
 declare module qx.type {
     class Array extends qx.type.BaseArray {
-        constructor(length_or_items?: number | null);
+        constructor(length_or_items?: number | any);
         insertAt(obj: any, i: number): qx.type.Array;
         insertBefore(obj: any, obj2: any): qx.type.Array;
         insertAfter(obj: any, obj2: any): qx.type.Array;
@@ -12475,7 +12475,7 @@ declare module qx.type {
 }
 declare module qx.type {
     class BaseArray extends qx.data.Array {
-        constructor(length_or_items?: number | null);
+        constructor(length_or_items?: number | any);
 
     }
 }
@@ -12615,13 +12615,13 @@ declare module qx.theme.manager {
     class Decoration extends qx.core.Object implements qx.core.IDisposable {
         dispose(): void;
         static getInstance(): Decoration;
-        getCssClassName(value: string | null): string;
-        addCssClass(value: string | null): string;
+        getCssClassName(value: string | qx.ui.decoration.IDecorator): string;
+        addCssClass(value: string | qx.ui.decoration.IDecorator): string;
         removeAllCssClasses(): void;
         resolve(value: string): any;
         isValidPropertyValue(value: any): boolean;
         isDynamic(value: string): boolean;
-        isCached(decorator: string | null): boolean;
+        isCached(decorator: string | qx.ui.decoration.IDecorator): boolean;
         protected _applyTheme(): void;
         clear(): void;
         refresh(): void;
@@ -12827,10 +12827,10 @@ declare module qx.dom {
 }
 declare module qx.dom {
     class Node {
-        static getDocument(node: Node | null): Document | null;
-        static getWindow(node: Node | null): Window;
-        static getDocumentElement(node: Node | null): qx.dom.Element;
-        static getBodyElement(node: Node | null): qx.dom.Element;
+        static getDocument(node: Node | Document | Window): Document | null;
+        static getWindow(node: Node | Document | Window): Window;
+        static getDocumentElement(node: Node | Document | Window): qx.dom.Element;
+        static getBodyElement(node: Node | Document | Window): qx.dom.Element;
         static isNode(node: qx.dom.Node): boolean;
         static isElement(node: qx.dom.Node): boolean;
         static isDocument(node: qx.dom.Node): boolean;
@@ -12979,7 +12979,7 @@ declare module qx.log {
         static getTreshold(): number;
         static register(appender: qx.Class): void;
         static unregister(appender: qx.Class): void;
-        static addFilter(logger: string | null, appenderName?: string, level?: string): void;
+        static addFilter(logger: string | RegExp, appenderName?: string, level?: string): void;
         static resetFilters(): void;
         static debug(object: {}, message: any): void;
         static info(object: {}, message: any): void;
@@ -13025,8 +13025,8 @@ declare module qx.dev {
         configure(responseData: IMap[]): void;
         addFilter(filter: Function): void;
         removeFilter(filter: Function): void;
-        removeResponse(method: string, url: string | null): void;
-        respondWith(method: string, urlRegExp: RegExp, response: Function | null): void;
+        removeResponse(method: string, url: string | RegExp): void;
+        respondWith(method: string, urlRegExp: RegExp, response: Function | qx.data.Array | string): void;
         getFakeServer(): {};
         restore(): void;
         protected _getRegExp(pattern: string): RegExp;
@@ -13091,12 +13091,12 @@ declare module qx.application {
         dispose(): void;
         init(defaultPath?: string): void;
         protected _getPathOrFallback(path: string, defaultPath?: string): string;
-        onGet(route: string | null, handler: Function, scope: {}): string;
-        on(route: string | null, handler: Function, scope: {}): string;
-        onPost(route: string | null, handler: Function, scope: {}): string;
-        onPut(route: string | null, handler: Function, scope: {}): string;
-        onDelete(route: string | null, handler: Function, scope: {}): string;
-        onAny(route: string | null, handler: Function, scope: {}): string;
+        onGet(route: string | RegExp, handler: Function, scope: {}): string;
+        on(route: string | RegExp, handler: Function, scope: {}): string;
+        onPost(route: string | RegExp, handler: Function, scope: {}): string;
+        onPut(route: string | RegExp, handler: Function, scope: {}): string;
+        onDelete(route: string | RegExp, handler: Function, scope: {}): string;
+        onAny(route: string | RegExp, handler: Function, scope: {}): string;
         remove(id: string): void;
         protected _executeGet(path: string, customData: any, fromEvent: any): void;
         executeGet(path: string, customData: any): void;
@@ -13227,14 +13227,14 @@ declare module qx.data {
         protected _applyEventPropagation(value: any, old: any, name: string): void;
         protected _registerEventChaining(value: any, old: any, name: string): void;
         constructor(param?: any);
-        concat(array: qx.data.Array | null): qx.data.Array;
+        concat(array: qx.data.Array | qx.data.Array): qx.data.Array;
         join(connector: string): string;
         pop(): any;
         push(...varargs: any[]): number;
         reverse(): void;
         shift(): any;
         slice(from: number, to?: number): qx.data.Array;
-        replace(src: qx.data.Array | null): void;
+        replace(src: qx.data.Array | qx.data.Array): void;
         sort(func: Function): void;
         unshift(...varargs: any[]): number;
         indexOf(item: any): number;
@@ -13246,7 +13246,7 @@ declare module qx.data {
         insertAfter(after: any, item: any): void;
         removeAt(index: number): any;
         removeAll(): qx.data.Array;
-        append(array: qx.data.Array | null): void;
+        append(array: qx.data.Array | qx.data.IListData): void;
         exclude(array: qx.data.Array): void;
         remove(item: any): any;
         equals(array: qx.data.Array): boolean;
@@ -13293,7 +13293,7 @@ declare module qx.data.controller {
 }
 declare module qx.data.controller.website {
     class List extends qx.core.Object {
-        constructor(model?: qx.data.IListData | null, target?: HTMLElement, templateId?: string);
+        constructor(model?: qx.data.IListData | qx.data.Array, target?: HTMLElement, templateId?: string);
         protected _applyModel(): void;
         protected _applyTarget(): void;
         protected _applyTemplateId(): void;
@@ -13950,9 +13950,9 @@ declare module qx.event {
 }
 declare module qx.event {
     class Messaging {
-        on(channel: string, type: string | null, handler: Function, scope?: any): string;
-        onAny(type: string | null, handler: Function, scope?: any): string;
-        protected _addListener(channel: string, type: string | null, handler: Function, scope?: any): string;
+        on(channel: string, type: string | RegExp, handler: Function, scope?: any): string;
+        onAny(type: string | RegExp, handler: Function, scope?: any): string;
+        protected _addListener(channel: string, type: string | RegExp, handler: Function, scope?: any): string;
         remove(id: string): void;
         has(channel: string, path: string): boolean;
         emit(channel: string, path: string, params: IMap, customData: any): void;
@@ -14010,16 +14010,16 @@ declare module qx.event.dispatch {
 }
 declare module qx.event.dispatch {
     class Direct implements qx.event.IEventDispatcher {
-        canDispatchEvent(target: HTMLElement | null, event: qx.event.type.Event, type: string): boolean;
-        dispatchEvent(target: HTMLElement | null, event: qx.event.type.Event, type: string): qx.Promise | null;
+        canDispatchEvent(target: HTMLElement | qx.event.type.Event, event: qx.event.type.Event, type: string): boolean;
+        dispatchEvent(target: HTMLElement | qx.event.type.Event, event: qx.event.type.Event, type: string): qx.Promise | null;
         constructor(manager?: qx.event.Manager);
 
     }
 }
 declare module qx.event.dispatch {
     class AbstractBubbling implements qx.event.IEventDispatcher {
-        canDispatchEvent(target: HTMLElement | null, event: qx.event.type.Event, type: string): boolean;
-        dispatchEvent(target: HTMLElement | null, event: qx.event.type.Event, type: string): qx.Promise | null;
+        canDispatchEvent(target: HTMLElement | qx.event.type.Event, event: qx.event.type.Event, type: string): boolean;
+        dispatchEvent(target: HTMLElement | qx.event.type.Event, event: qx.event.type.Event, type: string): qx.Promise | null;
         constructor(manager?: qx.event.Manager);
         protected _getParent(target: any): any;
 
@@ -14027,8 +14027,8 @@ declare module qx.event.dispatch {
 }
 declare module qx.event {
     interface IEventDispatcher {
-        canDispatchEvent(target: HTMLElement | null, event: qx.event.type.Event, type: string): boolean;
-        dispatchEvent(target: HTMLElement | null, event: qx.event.type.Event, type: string): qx.Promise | null;
+        canDispatchEvent(target: HTMLElement | qx.event.type.Event, event: qx.event.type.Event, type: string): boolean;
+        dispatchEvent(target: HTMLElement | qx.event.type.Event, event: qx.event.type.Event, type: string): qx.Promise | null;
 
     }
 }
@@ -14061,8 +14061,8 @@ declare module qx.event.message {
         static getSubscriptions(): {};
         static subscribe(param0: any, subscriber: Function, context: {}): boolean;
         static subscribeOnce(param0: any, subscriber: Function, context: {}): boolean;
-        static checkSubscription(topic: string | null, subscriber: Function, context: {}): boolean;
-        static unsubscribe(topic: string | null, subscriber: Function, context: {}): boolean;
+        static checkSubscription(topic: string | RegExp, subscriber: Function, context: {}): boolean;
+        static unsubscribe(topic: string | RegExp, subscriber: Function, context: {}): boolean;
         static dispatch(message: qx.event.message.Message): boolean;
         static dispatchByName(name: string, data: any): boolean;
         removeAllSubscriptions(): void;
@@ -14122,7 +14122,7 @@ declare module qx.event {
     class GlobalError {
         static setErrorHandler(callback?: Function, context?: {}): void;
         static observeMethod(method: Function): Function;
-        static handleError(ex: qx.core.WindowError | null): void;
+        static handleError(ex: qx.core.WindowError | Error): void;
 
     }
 }
