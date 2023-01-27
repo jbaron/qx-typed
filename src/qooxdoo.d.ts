@@ -2149,6 +2149,7 @@ declare module qx.ui.form {
 
     }
 }
+
 declare module qx.ui.form {
     class Button extends qx.ui.basic.Atom implements qx.ui.form.IExecutable {
         setCommand(command: qx.ui.command.Command): void;

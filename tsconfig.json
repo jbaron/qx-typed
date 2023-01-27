@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "amd",
         "target" : "ES6",
         "preserveConstEnums": true,
-        "outDir": "lib/"
+        "outFile": "lib/application.js"
     },
     "include": ["src/**/*"]
 }

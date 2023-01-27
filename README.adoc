@@ -2,7 +2,7 @@
 :icons: font
 
 == Introduction
-This is a small test application that demonstrates how you can easily use qooxdoo from
+This is a small demo application that demonstrates how you can easily use qooxdoo from
 a TypeScript project. This application can also serve as a template to build your own application.
 
 The easiest way is to try it out and get started is:
