@@ -23,7 +23,7 @@ class TablePage extends MyPage {
     }
 
     /**
-     * Create few random rows for the table example
+     * Create random rows for the table example
      */
     private createRandomRows(rowCount: number) {
         const rowData: any[] = [];

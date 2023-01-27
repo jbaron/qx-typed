@@ -4,9 +4,9 @@
  */ 
 class MyPage extends qx.ui.tabview.Page {
     constructor(name: string) {
-        super(name);
-        this.setLayout(new qx.ui.layout.Canvas());
-        this.setShowCloseButton(true);
+        super(name)
+        this.setLayout(new qx.ui.layout.Canvas())
+        this.setShowCloseButton(true)
     }   
 }
 
@@ -24,9 +24,9 @@ function qooxdooMain(app: qx.application.Standalone) {
     t.add(new WindowsPage())
 
     // add the tabview to the root
-    const root = <qx.ui.container.Composite>app.getRoot();
-    root.add(t,{edge: 0});
+    const root = <qx.ui.container.Composite>app.getRoot()
+    root.add(t,{edge: 0})
 }
 
 // register the main function
-qx.registry.registerMainMethod(qooxdooMain);
+qx.registry.registerMainMethod(qooxdooMain)

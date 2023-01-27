@@ -54,8 +54,7 @@ class FormPage extends MyPage {
         }, this);
         form.addButton(resetButton);
 
-        // create the form and return it
-        const c = new qx.ui.form.renderer.Single(form);
-        this.add(c);
+        const formRenderer = new qx.ui.form.renderer.Single(form);
+        this.add(formRenderer);
     }
 }
