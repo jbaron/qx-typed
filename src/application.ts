@@ -12,9 +12,11 @@ function createButtons(): MyPage {
     button3.addListener("execute", function() { meta.setTheme(qx.theme.TangibleLight) });
 
     const page = new MyPage("Buttons");
-    page.add(button1);
-    page.add(button2);
-    page.add(button3);
+    const container = new qx.ui.container.Composite(new qx.ui.layout.Flow())
+    container.add(button1);
+    container.add(button2);
+    container.add(button3);
+    page.add(container)
     return page;
 }
 
@@ -146,13 +148,47 @@ function createTree(): MyPage {
 }
 
 
+function createToolBar() : MyPage {
+    const page = new MyPage("Toolbar");
+    const toolBar = new qx.ui.toolbar.ToolBar()
+    toolBar.add(new qx.ui.toolbar.Button("Item 1"))
+    toolBar.add(new qx.ui.toolbar.Button("Item 2"))
+    toolBar.add(new qx.ui.toolbar.Separator())
+
+    const menuButton = new qx.ui.toolbar.MenuButton("Menu")
+    const menu = new qx.ui.menu.Menu()
+    for (let n=1;n<5;n++) menu.add(new qx.ui.menu.Button("item-" + n))
+    menuButton.setMenu(menu)
+    toolBar.add(menuButton)
+
+    page.add(toolBar)
+    return page;
+}
+
+
+
+function createWindow() : MyPage {
+    const page = new MyPage("Windows");
+    const desktop  = new qx.ui.window.Desktop()
+    for (let n=1;n<=5;n++) {
+        const win = new qx.ui.window.Window("Window " + n)
+        win.setShowStatusbar(true);
+        win.setMinWidth(200)
+        win.setDraggable(true)
+        win.open()
+        desktop.add(win, {left: n*50, top: n*50})
+    }
+    page.add(desktop, {edge: 0, top: 0})
+    return page;
+}
+
 /**
  * Example of extending an qooxdoo class
  */ 
 class MyPage extends qx.ui.tabview.Page {
     constructor(name: string) {
         super(name);
-        this.setLayout(new qx.ui.layout.Flow());
+        this.setLayout(new qx.ui.layout.Canvas());
         this.setShowCloseButton(true);
     }   
 }
@@ -168,6 +204,8 @@ function qooxdooMain(app: qx.application.Standalone) {
     t.add(createForm())
     t.add(createTable())
     t.add(createTree())
+    t.add(createToolBar())
+    t.add(createWindow())
 
     // add the tabview to the root
     const root = <qx.ui.container.Composite>app.getRoot();
