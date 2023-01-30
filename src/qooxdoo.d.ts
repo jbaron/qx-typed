@@ -1,4 +1,4 @@
-// Generated declaration file at Sat Jan 28 2023 08:30:32 GMT+0100 (Central European Standard Time)
+// Generated declaration file at Mon Jan 30 2023 09:30:16 GMT+0100 (Central European Standard Time)
 
 interface IMap {
     [key: string]: any;
@@ -1053,6 +1053,7 @@ declare module qx.ui.treevirtual {
 declare module qx.ui.treevirtual {
     class TreeVirtual extends qx.ui.table.Table {
         constructor(headings?: qx.data.Array | string, custom?: IMap);
+        static SelectionMode: any;
         getDataModel(): qx.ui.table.ITableModel;
         setUseTreeLines(b: boolean): void;
         getUseTreeLines(): boolean;
@@ -1080,6 +1081,7 @@ declare module qx.ui.treevirtual {
 }
 declare module qx.ui.treevirtual {
     class MTreePrimitive {
+        static Type: any;
         protected static _addNode(nodeArr: qx.data.Array | IMap, parentNodeId: number, label: string, bOpened: boolean, bHideOpenCloseButton: boolean, type: number, icon: string, iconSelected: string, nodeId?: number): number;
         protected static _getEmptyTree(): IMap;
 
@@ -2575,6 +2577,7 @@ declare module qx.ui.form.validation {
 }
 declare module qx.ui.form {
     class FileSelectorButton extends qx.ui.form.Button {
+        protected static _fileInputElementIdCounter: any;
         protected _applyAttribute(): void;
         getAccept(): string;
         setAccept(value: string): void;
@@ -2708,6 +2711,8 @@ declare module qx.ui.core {
         trc(hint: string, messageId: string, ...varargs: {}[]): any;
         trnc(hint: string, singularMessageId: string, pluralMessageId: string, count: number, ...varargs: {}[]): any;
         marktr(messageId: string): string;
+        static DEBUG: any;
+        static UNFOCUSABLE_WIDGET_FOCUS_BLUR_ERROR: any;
         static getWidgetByElement(element: HTMLElement, considerAnonymousState?: boolean): qx.ui.core.Widget;
         static contains(parent: qx.ui.core.Widget, child: qx.ui.core.Widget): boolean;
         protected _setLayout(layout: qx.ui.layout.Abstract): void;
@@ -3035,6 +3040,7 @@ declare module qx.ui.core.scroll {
         getDragScrollSlowDownFactor(): number;
         setDragScrollSlowDownFactor(value: number): void;
         resetDragScrollSlowDownFactor(): void;
+        static DEFAULT_SCROLLBAR_WIDTH: any;
         getPaneSize(): IMap | null;
         getItemTop(item: qx.ui.core.Widget): number;
         getItemBottom(item: qx.ui.core.Widget): number;
@@ -3355,9 +3361,16 @@ declare module qx.ui.core {
 }
 declare module qx.ui.core {
     class EventHandler extends qx.core.Object implements qx.event.IEventHandler {
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static IGNORE_CAN_HANDLE: any;
         protected _dispatchEvent(domEvent: qx.event.type.Event): void;
         destruct(): void;
 
@@ -3479,6 +3492,7 @@ declare module qx.ui.core.queue {
 }
 declare module qx.ui.core.queue {
     class Manager {
+        static MAX_RETRIES: any;
         static scheduleFlush(job: string): void;
         static flush(): void;
 
@@ -4106,6 +4120,7 @@ declare module qx.ui.layout {
 }
 declare module qx.ui.layout {
     class Util {
+        static PERCENT_VALUE: any;
         static computeFlexOffsets(flexibles: IMap, avail: number, used: number): IMap;
         static computeHorizontalAlignOffset(align: string, width: number, availWidth: number, marginLeft?: number, marginRight?: number): number;
         static computeVerticalAlignOffset(align: string, height: number, availHeight: number, marginTop?: number, marginBottom?: number): number;
@@ -4349,6 +4364,7 @@ declare module qx.ui.basic {
 declare module qx.ui.basic {
     class Image extends qx.ui.core.Widget {
         constructor(source?: string);
+        static PLACEHOLDER_IMAGE: any;
         protected _applySource(): void;
         protected _applyScale(): void;
         protected _styleSource(): void;
@@ -4869,6 +4885,7 @@ declare module qx.ui.progressive {
 declare module qx.ui.table.pane {
     class Model extends qx.core.Object {
         constructor(tableColumnModel?: qx.ui.table.columnmodel.Basic);
+        static EVENT_TYPE_MODEL_CHANGED: any;
         protected _applyFirstColumnX(): void;
         protected _applyMaxColumnCount(): void;
         setTableColumnModel(tableColumnModel: qx.ui.table.columnmodel.Basic): void;
@@ -4982,6 +4999,11 @@ declare module qx.ui.table.pane {
     class Scroller extends qx.ui.core.Widget {
         protected _createScrollBar(orientation?: string): qx.ui.core.scroll.IScrollBar;
         constructor(table?: qx.ui.table.Table);
+        static MIN_COLUMN_WIDTH: any;
+        static RESIZE_REGION_RADIUS: any;
+        static TAP_TOLERANCE: any;
+        static HORIZONTAL_SCROLLBAR: any;
+        static VERTICAL_SCROLLBAR: any;
         getPaneInsetRight(): number;
         setPaneWidth(width: number): void;
         protected _applyHorizontalScrollBarVisible(): void;
@@ -5215,6 +5237,10 @@ declare module qx.ui.table.columnmodel.resizebehavior {
 }
 declare module qx.ui.table.columnmodel {
     class Basic extends qx.core.Object {
+        static DEFAULT_WIDTH: any;
+        static DEFAULT_HEADER_RENDERER: any;
+        static DEFAULT_DATA_RENDERER: any;
+        static DEFAULT_EDITOR_FACTORY: any;
         init(colCount: number, table: qx.ui.table.Table): void;
         getVisibleColumns(): qx.data.Array;
         setColumnWidth(col: number, width: number, isPointerAction: boolean): void;
@@ -5641,6 +5667,10 @@ declare module qx.ui.table.cellrenderer {
 }
 declare module qx.ui.table.cellrenderer {
     class Default extends qx.ui.table.cellrenderer.Abstract {
+        static STYLEFLAG_ALIGN_RIGHT: any;
+        static STYLEFLAG_BOLD: any;
+        static STYLEFLAG_ITALIC: any;
+        protected static _numberFormat: any;
         protected _getStyleFlags(cellInfo: IMap): number;
         protected _formatValue(cellInfo: IMap): qx.ui.table.cellrenderer.String;
         getUseAutoAlign(): boolean;
@@ -5761,6 +5791,7 @@ declare module qx.ui.table.model {
         getValueById(columnId: string, rowIndex: number): any;
         setValue(columnIndex: number, rowIndex: number, value: any): void;
         setValueById(columnId: string, rowIndex: number, value: any): void;
+        static THROW_ON_MODEL_CHANGE_DURING_EDIT: any;
         init(table: qx.ui.table.Table): void;
         getTable(): any;
         setColumnIds(columnIdArr: string[]): void;
@@ -5783,6 +5814,11 @@ declare module qx.ui.table {
 }
 declare module qx.ui.table.selection {
     class Model extends qx.core.Object {
+        static NO_SELECTION: any;
+        static SINGLE_SELECTION: any;
+        static SINGLE_INTERVAL_SELECTION: any;
+        static MULTIPLE_INTERVAL_SELECTION: any;
+        static MULTIPLE_INTERVAL_SELECTION_TOGGLE: any;
         protected _applySelectionMode(): void;
         setBatchMode(batchMode: boolean): boolean;
         hasBatchMode(): boolean;
@@ -5853,6 +5889,8 @@ declare module qx.ui.table.headerrenderer {
     class Default extends qx.core.Object implements qx.ui.table.IHeaderRenderer {
         createHeaderCell(cellInfo: IMap): qx.ui.core.Widget;
         updateHeaderCell(cellInfo: IMap, cellWidget: qx.ui.core.Widget): void;
+        static STATE_SORTED: any;
+        static STATE_SORTED_ASCENDING: any;
         getToolTip(): string;
         setToolTip(value: string): void;
         resetToolTip(): void;
@@ -6015,6 +6053,7 @@ declare module qx.ui.mobile.page {
         isFireDomUpdatedOnResize(): boolean;
         setFireDomUpdatedOnResize(value: boolean): void;
         resetFireDomUpdatedOnResize(): void;
+        protected static _currentPage: any;
         protected static _onDeviceReady(): void;
         protected static _onBackButton(): void;
         protected static _onMenuButton(): void;
@@ -6061,6 +6100,7 @@ declare module qx.ui.mobile.form.renderer {
 }
 declare module qx.ui.mobile.form.renderer {
     class Single extends qx.ui.mobile.form.renderer.AbstractRenderer {
+        static ONE_LINE_WIDGETS: any;
         protected _isOneLineWidget(item: qx.ui.mobile.core.Widget): boolean;
         protected _addToScrollContainer(item: qx.ui.mobile.core.Widget, name: string): void;
         protected _addRow(item: qx.ui.mobile.core.Widget, name: string, layout: qx.ui.mobile.layout.Abstract): void;
@@ -6657,14 +6697,18 @@ declare module qx.ui.mobile.core {
         trc(hint: string, messageId: string, ...varargs: {}[]): any;
         trnc(hint: string, singularMessageId: string, pluralMessageId: string, count: number, ...varargs: {}[]): any;
         marktr(messageId: string): string;
+        static ID_PREFIX: any;
         static onShutdown(): void;
         static getCurrentId(): number;
         static registerWidget(widget: qx.ui.core.Widget): void;
         static unregisterWidget(id: string): void;
         static getWidgetById(id: string): qx.ui.core.Widget;
         static scheduleDomUpdated(): void;
+        static domUpdated: any;
         static addAttributeMapping(property: string, attribute: string, values: IMap): void;
         static addStyleMapping(property: string, style: string, values: IMap): void;
+        static ATTRIBUTE_MAPPING: any;
+        static STYLE_MAPPING: any;
         protected _getTagName(): string;
         protected _createContainerElement(): HTMLElement;
         protected _domUpdated(): void;
@@ -6793,9 +6837,16 @@ declare module qx.ui.mobile.core {
 }
 declare module qx.ui.mobile.core {
     class EventHandler extends qx.core.Object implements qx.event.IEventHandler {
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static IGNORE_CAN_HANDLE: any;
         protected _dispatchEvent(domEvent: qx.event.type.Event): void;
         destruct(): void;
 
@@ -6817,6 +6868,7 @@ declare module qx.ui.mobile.core {
 declare module qx.ui.mobile.core {
     class Blocker extends qx.ui.mobile.core.Widget {
         static getInstance(): Blocker;
+        static ROOT: any;
         forceHide(): void;
         isShown(): boolean;
         protected _updateSize(): void;
@@ -6831,6 +6883,13 @@ declare module qx.ui.mobile.core {
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static IGNORE_CAN_HANDLE: any;
         static refresh(): void;
         destruct(): void;
 
@@ -6936,6 +6995,8 @@ declare module qx.ui.mobile.layout {
 declare module qx.ui.mobile.layout {
     class AbstractBox extends qx.ui.mobile.layout.Abstract {
         constructor(alignX?: string, alignY?: string, reversed?: boolean);
+        static PROPERTY_CSS_MAPPING: any;
+        static SUPPORTED_CHILD_LAYOUT_PROPERTIES: any;
         protected _applyLayoutChange(): void;
         getAlignX(): any;
         setAlignX(value: any): void;
@@ -6984,6 +7045,8 @@ declare module qx.ui.mobile.basic {
 declare module qx.ui.mobile.basic {
     class Image extends qx.ui.mobile.core.Widget {
         constructor(source?: string);
+        static ROOT: any;
+        static PLACEHOLDER_IMAGE: any;
         protected _applySource(): void;
         protected _onChangeAppScale(): void;
         protected _createHighResolutionOverlay(highResSource: string, lowResSource: string): void;
@@ -7069,6 +7132,7 @@ declare module qx.ui.mobile.navigationbar {
 declare module qx.ui.mobile.dialog {
     class BusyIndicator extends qx.ui.mobile.basic.Atom {
         constructor(label?: string);
+        static SPINNER_ANIMATION: any;
         protected _onAppear(): void;
         protected _onDisappear(): void;
         protected _applySpinnerClass(): void;
@@ -7120,6 +7184,7 @@ declare module qx.ui.mobile.dialog {
 declare module qx.ui.mobile.dialog {
     class Popup extends qx.ui.mobile.core.Widget {
         constructor(widget?: qx.ui.mobile.core.Widget, anchor?: qx.ui.mobile.core.Widget);
+        static ROOT: any;
         protected _updatePosition(): void;
         hideWithDelay(delay: number): void;
         isShown(): boolean;
@@ -7157,6 +7222,11 @@ declare module qx.ui.mobile.dialog {
 declare module qx.ui.mobile.dialog {
     class Manager extends qx.core.Object {
         static getInstance(): Manager;
+        static INPUT_DIALOG: any;
+        static MESSAGE_DIALOG: any;
+        static WARNING_DIALOG: any;
+        static ERROR_DIALOG: any;
+        static WAITING_DIALOG: any;
         alert(title: string, text: string, handler: Function, scope: {}, button: string): qx.ui.mobile.dialog.Popup | {};
         confirm(title: string, text: string, handler: Function, scope: {}, buttons: string[]): qx.ui.mobile.dialog.Popup;
         input(title: string, text: string, handler: Function, scope: {}, buttons: string[]): qx.ui.mobile.dialog.Popup;
@@ -7684,6 +7754,7 @@ declare module qx.ui.window {
         setContentPadding(...args: number[]): void;
         resetContentPadding(): void;
         constructor(caption?: string, icon?: string);
+        static DEFAULT_MANAGER_CLASS: any;
         protected _updateCaptionBar(): void;
         close(): void;
         open(): void;
@@ -9030,6 +9101,9 @@ declare module qx.ui.control {
         resetInvalidMessage(): void;
         resetRequiredInvalidMessage(): void;
         constructor(date?: Date);
+        static MONTH_YEAR_FORMAT: any;
+        static WEEKDAY_FORMAT: any;
+        static WEEK_FORMAT: any;
         protected _applyValue(): void;
         protected _applyMinValue(): void;
         protected _applyMaxValue(): void;
@@ -9337,6 +9411,7 @@ declare module qx {
         static isDefined(name: string): boolean;
         static getTotalNumber(): number;
         static genericToString(): string;
+        static $$registry: any;
         static patch(theme: qx.Theme, mixinTheme: qx.Theme): void;
         static include(theme: qx.Theme, mixinTheme: qx.Theme): void;
 
@@ -9361,6 +9436,7 @@ declare module qx.bom {
 }
 declare module qx.bom {
     class AnimationFrame extends qx.event.Emitter {
+        static TIMEOUT: any;
         static calculateTiming(func: qx.bom.String, x: number): number;
         static request(callback: Function, context: any): number;
         startSequence(duration: number): void;
@@ -9398,6 +9474,8 @@ declare module qx.bom {
 }
 declare module qx.bom {
     class Template {
+        static version: any;
+        static render: any;
         static renderToNode(template: qx.bom.String, view: {}, partials: {}): HTMLElement;
         static get(id: qx.bom.String, view: {}, partials: {}): HTMLElement;
         protected static _createNodeFromTemplate(template: qx.bom.String): HTMLElement;
@@ -9406,6 +9484,8 @@ declare module qx.bom {
 }
 declare module qx.bom {
     class Selector {
+        static query: any;
+        static matches: any;
 
     }
 }
@@ -9414,6 +9494,7 @@ declare module qx.bom {
         static create(type: qx.bom.String, attributes: IMap, win: Window): HTMLElement;
         static setValue(element: HTMLElement, value: string | number | qx.data.Array): void;
         static getValue(element: HTMLElement): string | qx.data.Array;
+        static setWrap: any;
 
     }
 }
@@ -9431,11 +9512,14 @@ declare module qx.bom {
 }
 declare module qx.bom {
     class Range {
+        static get: any;
 
     }
 }
 declare module qx.bom {
     class IdleCallback extends qx.core.Object {
+        static TIMEOUT: any;
+        static REMAINING: any;
         static request(callback: Function, context: any, timeout: number): number;
         static cancel(handle: number): void;
 
@@ -9450,6 +9534,7 @@ declare module qx.bom {
 }
 declare module qx.bom.element {
     class Decoration {
+        static DEBUG: any;
         static update(element: HTMLElement, source: string, repeat: string, style: IMap): void;
         static create(source: string, repeat: string, style: IMap): string;
         static getTagName(repeat: string, source?: string): string;
@@ -9469,6 +9554,10 @@ declare module qx.bom.element {
 }
 declare module qx.bom.element {
     class Opacity {
+        static compile: any;
+        static set: any;
+        static reset: any;
+        static get: any;
 
     }
 }
@@ -9560,6 +9649,9 @@ declare module qx.bom.element {
         static setCss(element: HTMLElement, value: string): void;
         static getCss(element: HTMLElement): string;
         static isPropertySupported(propertyName: string): boolean;
+        static COMPUTED_MODE: any;
+        static CASCADED_MODE: any;
+        static LOCAL_MODE: any;
         static set(element: HTMLElement, name: string, value: any, smart?: boolean): void;
         static setStyles(element: HTMLElement, styles: IMap, smart?: boolean): void;
         static reset(element: HTMLElement, name: string, smart?: boolean): void;
@@ -9587,8 +9679,14 @@ declare module qx.bom.element {
 }
 declare module qx.bom.element {
     class Class {
+        static add: any;
+        static addClasses: any;
         static get(element: HTMLElement): string;
+        static has: any;
+        static remove: any;
+        static removeClasses: any;
         static replace(element: HTMLElement, oldName: string, newName: string): string;
+        static toggle: any;
 
     }
 }
@@ -9661,6 +9759,7 @@ declare module qx.bom {
 }
 declare module qx.bom {
     class Style {
+        static VENDOR_PREFIXES: any;
         static getPropertyName(propertyName: qx.bom.String): string | null;
         static getCssName(propertyName: qx.bom.String): qx.bom.String;
         static getAppliedStyle(element: HTMLElement, propertyName: qx.bom.String, value: qx.bom.String, prefixed?: boolean): string | null;
@@ -9670,6 +9769,7 @@ declare module qx.bom {
 declare module qx.bom {
     class MediaQuery extends qx.event.Emitter {
         constructor(query?: qx.bom.String);
+        static version: any;
         getQuery(): qx.bom.String;
         isMatching(): boolean;
 
@@ -9677,6 +9777,7 @@ declare module qx.bom {
 }
 declare module qx.bom {
     class History extends qx.core.Object {
+        static SUPPORTS_HASH_CHANGE_EVENT: any;
         static getInstance(): qx.bom.History;
         protected _applyState(): void;
         protected _setInitialState(): void;
@@ -9774,6 +9875,7 @@ declare module qx.bom.storage {
 }
 declare module qx.bom {
     class String {
+        static TO_CHARCODE: any;
         static escape(str: qx.bom.String): qx.bom.String;
         static unescape(str: qx.bom.String): any;
         static fromText(str: qx.bom.String): qx.bom.String;
@@ -9860,6 +9962,7 @@ declare module qx.bom {
 }
 declare module qx.bom {
     class Document {
+        static isQuirksMode: any;
         static isStandardMode(win?: Window): boolean;
         static getWidth(win?: Window): number;
         static getHeight(win?: Window): number;
@@ -9876,6 +9979,9 @@ declare module qx.bom {
 declare module qx.bom.webfonts {
     class Validator extends qx.core.Object {
         constructor(fontFamily?: string, comparisonString?: string, fontWeight?: string, fontStyle?: string);
+        static COMPARISON_FONTS: any;
+        static HELPER_CSS: any;
+        static COMPARISON_STRING: any;
         static removeDefaultHelperElements(): void;
         validate(): void;
         protected _reset(): void;
@@ -9922,6 +10028,8 @@ declare module qx.bom.webfonts {
 declare module qx.bom.webfonts {
     class Manager extends qx.core.Object {
         static getInstance(): Manager;
+        static FONT_FORMATS: any;
+        static VALIDATION_TIMEOUT: any;
         require(familyName: string, sourcesList: {}, callback?: Function, context?: {}): void;
         remove(familyName: string, fontWeight: string, fontStyle: string): void;
         getPreferredFormats(): string[];
@@ -9952,12 +10060,20 @@ declare module qx.bom {
 }
 declare module qx.bom {
     class Selection {
+        static getSelectionObject: any;
+        static get: any;
+        static getLength: any;
+        static getStart: any;
+        static getEnd: any;
+        static set: any;
         static setAll(node: Node): boolean;
+        static clear: any;
 
     }
 }
 declare module qx.bom {
     class Iframe {
+        static DEFAULT_ATTRIBUTES: any;
         static create(attributes?: IMap, win?: Window): qx.bom.Element;
         static getWindow(iframe: qx.bom.Element): Window | null;
         static getDocument(iframe: qx.bom.Element): qx.bom.Document;
@@ -10010,6 +10126,11 @@ declare module qx.bom.request {
 declare module qx.bom.request {
     class Xhr implements qx.core.IDisposable {
         dispose(): void;
+        static UNSENT: any;
+        static OPENED: any;
+        static HEADERS_RECEIVED: any;
+        static LOADING: any;
+        static DONE: any;
         open(method?: string, url?: string, async?: boolean, user?: string, password?: string): void;
         setRequestHeader(key: string, value: string): qx.bom.request.Xhr;
         send(data?: string | Document): qx.bom.request.Xhr;
@@ -10462,6 +10583,9 @@ declare module qx.bom.rest {
     class Resource extends qx.event.Emitter implements qx.core.IDisposable {
         dispose(): void;
         constructor(description?: IMap);
+        static POLL_THROTTLE_LIMIT: any;
+        static POLL_THROTTLE_COUNT: any;
+        static REQUIRED: any;
         static placeholdersFromUrl(url: string): qx.data.Array;
         setRequestFactory(fn: Function): void;
         setRequestHandler(handler: IMap): void;
@@ -10773,6 +10897,7 @@ declare module qx.core {
         assertElement(value: any, msg?: string): void;
         assertQxObject(value: any, msg?: string): void;
         assertQxWidget(value: any, msg?: string): void;
+        static $$type: any;
         toHashCode(): string;
         toUuid(): string;
         setExplicitUuid(uuid: string): void;
@@ -10844,6 +10969,7 @@ declare module qx.core {
 }
 declare module qx.core {
     class ObjectRegistry {
+        static inShutDown: any;
         static register(obj: qx.core.Object): void;
         static unregister(obj: qx.core.Object): void;
         static toHashCode(obj: qx.core.Object): string;
@@ -10861,6 +10987,12 @@ declare module qx.core {
 }
 declare module qx.core {
     class Property {
+        static $$inherit: any;
+        static $$store: any;
+        static $$method: any;
+        static $$allowedKeys: any;
+        static $$allowedGroupKeys: any;
+        static $$inheritable: any;
         static attachRefreshInheritables(clazz: qx.Class): void;
         static attachMethods(clazz: qx.Class, name: string, config: IMap): void;
         static error(obj: qx.core.Object, id: number, property: string, variant: string, value: any): void;
@@ -10907,6 +11039,8 @@ declare module qx.core {
 }
 declare module qx.core {
     class Init {
+        static getApplication: any;
+        static ready: any;
 
     }
 }
@@ -10917,6 +11051,10 @@ declare module qx.core {
 }
 declare module qx.core {
     class Environment {
+        protected static _checks: any;
+        protected static _asyncChecks: any;
+        protected static _checksMap: any;
+        protected static _defaults: any;
         static get(key: string): any;
         protected static _getClassNameFromEnvKey(key: string): qx.data.Array;
         static getAsync(key: string, callback: Function, self: any): void;
@@ -11080,6 +11218,36 @@ declare module qx.util {
 }
 declare module qx.util {
     class Animation {
+        static SLIDE_LEFT_IN: any;
+        static SLIDE_LEFT_OUT: any;
+        static SLIDE_RIGHT_IN: any;
+        static SLIDE_RIGHT_OUT: any;
+        static FADE_IN: any;
+        static FADE_OUT: any;
+        static POP_IN: any;
+        static POP_OUT: any;
+        static SHRINK_HEIGHT: any;
+        static GROW_HEIGHT: any;
+        static SHRINK_WIDTH: any;
+        static GROW_WIDTH: any;
+        static SHRINK: any;
+        static GROW: any;
+        static SLIDE_UP_IN: any;
+        static SLIDE_UP_OUT: any;
+        static SLIDE_DOWN_IN: any;
+        static SLIDE_DOWN_OUT: any;
+        static FLIP_LEFT_IN: any;
+        static FLIP_LEFT_OUT: any;
+        static FLIP_RIGHT_IN: any;
+        static FLIP_RIGHT_OUT: any;
+        static SWAP_LEFT_IN: any;
+        static SWAP_LEFT_OUT: any;
+        static SWAP_RIGHT_IN: any;
+        static SWAP_RIGHT_OUT: any;
+        static CUBE_LEFT_IN: any;
+        static CUBE_LEFT_OUT: any;
+        static CUBE_RIGHT_IN: any;
+        static CUBE_RIGHT_OUT: any;
 
     }
 }
@@ -11142,6 +11310,10 @@ declare module qx.util.format {
         constructor(format?: string | null, locale?: string);
         static getDateInstance(): qx.util.format.DateFormat;
         static getDateTimeInstance(): qx.util.format.DateFormat;
+        static ASSUME_YEAR_2000_THRESHOLD: any;
+        static ISO_MASKS: any;
+        static AM_MARKER: any;
+        static PM_MARKER: any;
         setLocale(value: string): void;
         resetLocale(): void;
         getLocale(): void;
@@ -11171,6 +11343,7 @@ declare module qx.util {
 }
 declare module qx.util {
     class Uuid extends qx.core.Object {
+        static createUuidV4: any;
 
     }
 }
@@ -11207,12 +11380,19 @@ declare module qx.util {
 }
 declare module qx.util {
     class Wheel {
+        static MAXSCROLL: any;
+        static MINSCROLL: any;
+        static FACTOR: any;
+        static IS_TOUCHPAD: any;
         static getDelta(domEvent: qx.event.type.Event, axis?: string): number;
 
     }
 }
 declare module qx.util {
     class ColorUtil {
+        static REGEXP: any;
+        static SYSTEM: any;
+        static NAMED: any;
         static isNamedColor(value: string): boolean;
         static isSystemColor(value: string): boolean;
         static supportsThemes(): boolean;
@@ -11250,6 +11430,7 @@ declare module qx.util {
 declare module qx.util {
     class ResponseParser {
         constructor(parser?: string | Function);
+        static PARSER: any;
         parse(response: string, contentType: string): string | {};
         setParser(parser: string | Function): qx.util.Function;
         protected _getParser(param0: any): Function | null;
@@ -11258,6 +11439,7 @@ declare module qx.util {
 }
 declare module qx.util.placement {
     class DirectAxis {
+        protected static _moveToEdgeAndAlign: any;
         static computeStart(size: number, target: IMap, offsets: IMap, areaSize: number, position: string): number;
 
     }
@@ -11283,6 +11465,8 @@ declare module qx.util.placement {
 }
 declare module qx.util.placement {
     class KeepAlignAxis {
+        protected static _moveToEdgeAndAlign: any;
+        protected static _isInRange: any;
         static computeStart(size: number, target: IMap, offsets: IMap, areaSize: number, position: string): number;
 
     }
@@ -11297,27 +11481,50 @@ declare module qx.util.placement {
 }
 declare module qx.util.placement {
     class BestFitAxis {
+        protected static _isInRange: any;
+        protected static _moveToEdgeAndAlign: any;
         static computeStart(size: number, target: IMap, offsets: IMap, areaSize: number, position: string): number;
 
     }
 }
 declare module qx.module {
     class Messaging {
+        static on: any;
+        static onAny: any;
+        static remove: any;
+        static emit: any;
 
     }
 }
 declare module qx.module {
     class Cookie {
+        static get: any;
+        static set: any;
+        static del: any;
 
     }
 }
 declare module qx.module.util {
     class Function {
+        static debounce: any;
+        static throttle: any;
 
     }
 }
 declare module qx.module.util {
     class Array {
+        static cast: any;
+        static equals: any;
+        static exclude: any;
+        static fromArguments: any;
+        static insertAfter: any;
+        static insertBefore: any;
+        static max: any;
+        static min: any;
+        static remove: any;
+        static removeAll: any;
+        static unique: any;
+        static range: any;
 
     }
 }
@@ -11325,19 +11532,28 @@ declare module qx.module.util {
     class String {
         static camelCase(str: qx.module.util.String): qx.module.util.String;
         static hyphenate(str: qx.module.util.String): qx.module.util.String;
+        static firstUp: any;
+        static firstLow: any;
         static startsWith(fullstr: qx.module.util.String, substr: qx.module.util.String): boolean;
         static endsWith(fullstr: qx.module.util.String, substr: qx.module.util.String): boolean;
+        static escapeRegexpChars: any;
+        static escapeHtml: any;
 
     }
 }
 declare module qx.module.util {
     class Object {
+        static clone: any;
+        static getValues: any;
+        static invert: any;
+        static contains: any;
         static merge(target: qx.module.util.Object, ...varargs: any[]): qx.module.util.Object;
 
     }
 }
 declare module qx.module.util {
     class Type {
+        static get: any;
 
     }
 }
@@ -11393,6 +11609,7 @@ declare module qx.module {
 }
 declare module qx.module {
     class Traversing {
+        static EQUALITY_ATTRIBUTES: any;
         static isElement(selector: {} | string | any): boolean;
         static isNode(selector: Node | string | any): boolean;
         static isNodeName(selector: Node | string | any, nodeName: string): boolean;
@@ -11460,6 +11677,8 @@ declare module qx.module {
 }
 declare module qx.module {
     class Animation {
+        protected static _fadeOut: any;
+        protected static _fadeIn: any;
         protected static _animate(desc: IMap, duration?: number, reverse?: boolean): void;
         getAnimationHandles(): qx.data.Array;
         animate(desc: IMap, duration?: number): any;
@@ -11476,6 +11695,7 @@ declare module qx.module {
 }
 declare module qx.module {
     class Placeholder {
+        static PLACEHOLDER_NAME: any;
         static update(): void;
         updatePlaceholder(): any;
 
@@ -11488,6 +11708,7 @@ declare module qx.module {
 }
 declare module qx.module {
     class Manipulating {
+        protected static _animationDescription: any;
         static create(html: string | HTMLElement, context?: Document): any;
         clone(events: boolean): any;
         append(html: string | HTMLElement | any): any;
@@ -11629,6 +11850,7 @@ declare module qx.module {
 }
 declare module qx.module.event {
     class OrientationHandler {
+        static TYPES: any;
         static register(element: Window): void;
         static unregister(element: HTMLElement): void;
 
@@ -11636,12 +11858,14 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Touch {
+        static TYPES: any;
         static normalize(event: qx.event.type.Event, element: HTMLElement, type: string): qx.event.type.Event;
 
     }
 }
 declare module qx.module.event {
     class PointerHandler {
+        static TYPES: any;
         static register(element: HTMLElement, type: string): void;
         static unregister(element: HTMLElement): void;
 
@@ -11649,6 +11873,8 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Swipe {
+        static TYPES: any;
+        static BIND_METHODS: any;
         static getStartTime(): number;
         static getDuration(): number;
         static getAxis(): string;
@@ -11661,6 +11887,7 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class TouchHandler {
+        static TYPES: any;
         static register(element: HTMLElement): void;
         static unregister(element: HTMLElement): void;
 
@@ -11668,6 +11895,8 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Rotate {
+        static TYPES: any;
+        static BIND_METHODS: any;
         static getAngle(): number;
         static normalize(event: qx.event.type.Event, element: HTMLElement): qx.event.type.Event;
 
@@ -11675,6 +11904,8 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Keyboard {
+        static TYPES: any;
+        static BIND_METHODS: any;
         static getKeyIdentifier(): string;
         static normalize(event: qx.event.type.Event, element: HTMLElement): qx.event.type.Event;
         static registerInputFix(element: HTMLElement): void;
@@ -11685,6 +11916,8 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Tap {
+        static TYPES: any;
+        static BIND_METHODS: any;
         static getViewportLeft(): number;
         static getViewportTop(): number;
         static getDocumentLeft(): number;
@@ -11697,6 +11930,9 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Native {
+        static TYPES: any;
+        static FORWARD_METHODS: any;
+        static BIND_METHODS: any;
         static preventDefault(): void;
         static stopPropagation(): void;
         static getType(): string;
@@ -11709,6 +11945,7 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class GestureHandler {
+        static TYPES: any;
         static register(element: HTMLElement, type: string): void;
         static unregister(element: HTMLElement): void;
 
@@ -11716,6 +11953,8 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Track {
+        static TYPES: any;
+        static BIND_METHODS: any;
         static getDelta(): IMap;
         static normalize(event: qx.event.type.Event, element: HTMLElement): qx.event.type.Event;
 
@@ -11723,6 +11962,8 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Pinch {
+        static TYPES: any;
+        static BIND_METHODS: any;
         static getScale(): number;
         static normalize(event: qx.event.type.Event, element: HTMLElement): qx.event.type.Event;
 
@@ -11730,6 +11971,7 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Pointer {
+        static TYPES: any;
         static getPointerType(): string;
         static getViewportLeft(): number;
         static getViewportTop(): number;
@@ -11743,6 +11985,10 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Mouse {
+        static TYPES: any;
+        static BIND_METHODS: any;
+        static BUTTONS_DOM2: any;
+        static BUTTONS_MSHTML: any;
         static getButton(): string;
         static getViewportLeft(): number;
         static getViewportTop(): number;
@@ -11756,6 +12002,8 @@ declare module qx.module.event {
 }
 declare module qx.module.event {
     class Orientation {
+        static TYPES: any;
+        static BIND_METHODS: any;
         static getOrientation(): number;
         static isLandscape(): boolean;
         static isPortrait(): boolean;
@@ -11950,6 +12198,7 @@ declare module qx.io.jsonrpc.protocol {
 declare module qx.io.jsonrpc {
     class Client extends qx.io.transport.AbstractClient {
         constructor(transportOrUri?: qx.io.transport.ITransport | string, methodPrefix?: string, parser?: qx.io.jsonrpc.protocol.Parser);
+        static registerTransport: any;
         protected _prependMethodPrefix(param0: any): string;
         protected _throwTransportException(exception: any): void;
         send(param0: any): qx.Promise;
@@ -12007,6 +12256,7 @@ declare module qx.io.graphql.protocol {
 declare module qx.io.graphql {
     class Client extends qx.io.transport.AbstractClient {
         constructor(transportOrUri?: qx.io.transport.ITransport | string);
+        static registerTransport: any;
         send(request: qx.io.graphql.protocol.Request): qx.Promise;
         protected _handleErrors(response: qx.io.graphql.protocol.Response): qx.io.exception.Protocol;
 
@@ -12167,6 +12417,17 @@ declare module qx.io {
 }
 declare module qx.io.exception {
     class Transport extends qx.io.exception.Exception {
+        static TIMEOUT: any;
+        static ABORTED: any;
+        static NO_DATA: any;
+        static INVALID_MSG_DATA: any;
+        static CANCELLED: any;
+        static INVALID_URI: any;
+        static FAILED: any;
+        static INVALID_ID: any;
+        static INVALID_JSON: any;
+        static DUPLICATE_ID: any;
+        static UNKNOWN_ID: any;
 
     }
 }
@@ -12191,6 +12452,9 @@ declare module qx.io.rest {
     class Resource extends qx.core.Object implements qx.core.IDisposable {
         dispose(): void;
         constructor(description?: IMap);
+        static POLL_THROTTLE_LIMIT: any;
+        static POLL_THROTTLE_COUNT: any;
+        static REQUIRED: any;
         static placeholdersFromUrl(url: string): qx.data.Array;
         protected _getResource(description?: IMap): qx.bom.rest.Resource;
         protected _tailorResource(resource: qx.bom.rest.Resource): qx.bom.rest.Resource;
@@ -12225,6 +12489,8 @@ declare module qx.html {
 declare module qx.html {
     class Jsx extends qx.core.Object {
         static createElement(tagname: string, attributes?: IMap, children?: qx.html.Node[]): any;
+        static SYNTETIC_EVENTS: any;
+        static FRAGMENT: any;
 
     }
 }
@@ -12386,6 +12652,13 @@ declare module qx.html {
 declare module qx.html {
     class Element extends qx.html.Node {
         constructor(tagName?: string, styles?: IMap, attributes?: IMap);
+        static DEBUG: any;
+        protected static _hasRoots: any;
+        protected static _defaultRoot: any;
+        protected static _modified: any;
+        protected static _visibility: any;
+        protected static _scroll: any;
+        protected static _actions: any;
         protected static _scheduleFlush(job: string): void;
         static flush(): void;
         static fromDomElement(domElement: any): qx.ui.core.Widget;
@@ -12457,6 +12730,8 @@ declare module qx.html {
 }
 declare module qx.xml {
     class Document {
+        static DOMDOC: any;
+        static XMLHTTP: any;
         static isXmlDocument(elem: Document | HTMLElement): boolean;
         static create(namespaceUri?: string, qualifiedName?: string): qx.xml.Document;
         static fromString(str: string): qx.xml.Document;
@@ -12531,6 +12806,8 @@ declare module qx.lang {
         static endsWith(fullstr: qx.lang.String, substr: qx.lang.String): boolean;
         static repeat(str: qx.lang.String, times: number): qx.lang.String;
         static pad(str: qx.lang.String, length: number, ch: qx.lang.String): qx.lang.String;
+        static firstUp: any;
+        static firstLow: any;
         static contains(str: qx.lang.String, substring: qx.lang.String): boolean;
         static format(pattern: qx.lang.String, args: qx.lang.Array): qx.lang.String;
         static escapeRegexpChars(str: qx.lang.String): qx.lang.String;
@@ -12545,7 +12822,9 @@ declare module qx.lang {
     class Object {
         static empty(map: qx.lang.Object): void;
         static isEmpty(map: qx.lang.Object): boolean;
+        static getLength: any;
         static getValues(map: qx.lang.Object): qx.lang.Array;
+        static mergeWith: any;
         static clone(source: qx.lang.Object, deep: boolean): qx.lang.Object;
         static equals(object1: qx.lang.Object, object2: qx.lang.Object): boolean;
         static invert(map: qx.lang.Object): qx.lang.Object;
@@ -12592,6 +12871,7 @@ declare module qx.lang.normalize {
 }
 declare module qx.lang.normalize {
     class Number {
+        static EPSILON: any;
 
     }
 }
@@ -12607,6 +12887,7 @@ declare module qx.lang.normalize {
 }
 declare module qx.lang.normalize {
     class Object {
+        static keys: any;
         static values(map: qx.lang.normalize.Object): qx.lang.normalize.Array;
         static is(x: qx.lang.normalize.Object, y: qx.lang.normalize.Object): boolean;
         static assign(target: qx.lang.normalize.Object, sources: qx.lang.normalize.Object): qx.lang.normalize.Object;
@@ -12615,11 +12896,19 @@ declare module qx.lang.normalize {
 }
 declare module qx.lang {
     class Json {
+        static stringify: any;
+        static parse: any;
 
     }
 }
 declare module qx.lang {
     class Type {
+        static getClass: any;
+        static isString: any;
+        static isArray: any;
+        static isObject: any;
+        static isFunction: any;
+        static isFunctionOrAsyncFunction: any;
         static isRegExp(value: any): boolean;
         static isNumber(value: any): boolean;
         static isBoolean(value: any): boolean;
@@ -12633,22 +12922,32 @@ declare module qx {
     class Class {
         static define(name?: string, config?: IMap): qx.Class;
         static undefine(name: string): void;
+        static isDefined: any;
         static getTotalNumber(): number;
+        static getByName: any;
         static include(clazz: qx.Class, mixin: qx.Mixin): void;
         static patch(clazz: qx.Class, mixin: qx.Mixin): qx.Class;
         static isClass(obj?: {}): boolean;
         static isSubClassOf(clazz: qx.Class, superClass: qx.Class): boolean;
+        static getPropertyDefinition: any;
         static getProperties(clazz: qx.Class): string[];
         static getByProperty(clazz: qx.Class, name: string): any;
+        static hasProperty: any;
+        static getEventType: any;
+        static supportsEvent: any;
         static hasOwnMixin(clazz: qx.Class, mixin: qx.Mixin): boolean;
         static getByMixin(clazz: qx.Class, mixin: qx.Mixin): any;
+        static getMixins: any;
         static hasMixin(clazz: qx.Class, mixin: qx.Mixin): boolean;
         static hasOwnInterface(clazz: qx.Class, iface: qx.Interface): boolean;
+        static getByInterface: any;
         static getInterfaces(clazz: qx.Class): qx.Interface[];
+        static hasInterface: any;
         static implementsInterface(obj: {}, iface: qx.Interface): boolean;
         static getInstance(): {};
         static getSubclasses(clazz: qx.Class): {};
         static genericToString(): string;
+        static $$registry: any;
 
     }
 }
@@ -12684,6 +12983,7 @@ declare module qx.type {
 declare module qx.type {
     class BaseError extends Error {
         constructor(comment?: string, failMessage?: string);
+        static DEFAULTMESSAGE: any;
         getComment(): string;
 
     }
@@ -12691,6 +12991,7 @@ declare module qx.type {
 declare module qx {
     class Part {
         constructor(loader?: {});
+        static TIMEOUT: any;
         static getInstance(): qx.Part;
         static require(partNames: string[], callback: Function, self?: {}): void;
         static preload(partNames: string[]): void;
@@ -12759,6 +13060,7 @@ declare module qx.theme.simple {
 }
 declare module qx.theme.simple {
     class Image extends qx.core.Object {
+        static URLS: any;
 
     }
 }
@@ -12817,6 +13119,7 @@ declare module qx.theme.manager {
     class Decoration extends qx.core.Object implements qx.core.IDisposable {
         dispose(): void;
         static getInstance(): Decoration;
+        static CSS_CLASSNAME_PREFIX: any;
         getCssClassName(value: string | qx.ui.decoration.IDecorator): string;
         addCssClass(value: string | qx.ui.decoration.IDecorator): string;
         removeAllCssClasses(): void;
@@ -12929,6 +13232,7 @@ declare module qx.theme.tangible {
 }
 declare module qx.theme.tangible {
     class Image extends qx.core.Object {
+        static URLS: any;
 
     }
 }
@@ -12978,6 +13282,9 @@ declare module qx.theme {
 declare module qx {
     class Promise extends qx.core.Object {
         constructor(fn?: Function, context?: {});
+        static Bluebird: any;
+        static Native: any;
+        static Promise: any;
         static isPromise(param0: any): boolean;
         static resolve(param0: any, context?: {}): qx.Promise;
         static reject(reason?: {}, context?: {}): qx.Promise;
@@ -13032,6 +13339,18 @@ declare module qx.dom {
 }
 declare module qx.dom {
     class Node {
+        static ELEMENT: any;
+        static ATTRIBUTE: any;
+        static TEXT: any;
+        static CDATA_SECTION: any;
+        static ENTITY_REFERENCE: any;
+        static ENTITY: any;
+        static PROCESSING_INSTRUCTION: any;
+        static COMMENT: any;
+        static DOCUMENT: any;
+        static DOCUMENT_TYPE: any;
+        static DOCUMENT_FRAGMENT: any;
+        static NOTATION: any;
         static getDocument(node: Node | Document | Window): Document | null;
         static getWindow(node: Node | Document | Window): Window;
         static getDocumentElement(node: Node | Document | Window): qx.dom.Element;
@@ -13140,6 +13459,7 @@ declare module qx.log.appender {
 }
 declare module qx.log.appender {
     class RhinoFile {
+        static FILENAME: any;
         static log(logMessage: string, level: string): void;
         static debug(logMessage: string): void;
         static info(logMessage: string): void;
@@ -13152,6 +13472,10 @@ declare module qx.log.appender {
 }
 declare module qx.log.appender {
     class Util {
+        static toHtml: any;
+        static toText: any;
+        static toTextArray: any;
+        static escapeHTML: any;
 
     }
 }
@@ -13204,11 +13528,14 @@ declare module qx.log {
 }
 declare module qx.dev.unit {
     class Sinon {
+        static getSinon: any;
 
     }
 }
 declare module qx.dev {
     class StackTrace {
+        static FILENAME_TO_CLASSNAME: any;
+        static FORMAT_STACKTRACE: any;
         static getStackTrace(): string[];
         static getStackTraceFromCaller(args: any): string[];
         static getStackTraceFromError(error: Error): string[];
@@ -13217,15 +13544,21 @@ declare module qx.dev {
 }
 declare module qx.dev {
     class Debug {
+        static disposeProfilingActive: any;
         static debugObject(obj: {}, initialMessage: string | null, maxLevel?: number): void;
         static debugObjectToString(obj: {}, initialMessage: string | null, maxLevel?: number, bHtml?: boolean): string;
         static getFunctionName(func: Function, functionType?: string): string | null;
         static debugProperties(model: qx.core.Object, maxLevel?: number, html?: boolean, param3?: any): string;
+        static startDisposeProfiling: any;
+        static stopDisposeProfiling: any;
+        static showDisposeProfiling: any;
 
     }
 }
 declare module qx.dev {
     class FakeServer {
+        static $$instance: any;
+        static $$allowconstruct: any;
         static getInstance(): {};
         configure(responseData: IMap[]): void;
         addFilter(filter: Function): void;
@@ -13295,6 +13628,7 @@ declare module qx.application {
 declare module qx.application {
     class Routing implements qx.core.IDisposable {
         dispose(): void;
+        static DEFAULT_PATH: any;
         init(defaultPath?: string): void;
         protected _getPathOrFallback(path: string, defaultPath?: string): string;
         onGet(route: string | RegExp, handler: Function, scope: {}): string;
@@ -13345,6 +13679,7 @@ declare module qx {
         static objectImplements(object: qx.core.Object, iface: qx.Interface): boolean;
         static classImplements(clazz: qx.Class, iface: qx.Interface): boolean;
         static genericToString(): string;
+        static $$registry: any;
 
     }
 }
@@ -13389,6 +13724,7 @@ declare module qx.data.marshal {
         toClass(data: {}, includeBubbleEvents: boolean): void;
         toModel(data: {}): qx.core.Object;
         constructor(delegate?: {});
+        static $$instance: any;
         static createModel(data: {}, includeBubbleEvents: boolean): qx.core.Object;
         static legacyJsonHash(): void;
 
@@ -13787,6 +14123,7 @@ declare module qx.data.store {
 declare module qx.data.store {
     class Offline extends qx.core.Object {
         constructor(key?: string, storage?: string, delegate?: {});
+        static STORE_MODEL_DELAY: any;
         protected _applyModel(): void;
         protected _initializeModel(): void;
         protected _setModel(data: any): void;
@@ -13800,8 +14137,11 @@ declare module qx.data.store {
 }
 declare module qx.data {
     class Conversion {
+        static TOSTRINGOPTIONS: any;
         static toNumber(value: any): number;
+        static TONUMBEROPTIONS: any;
         static toBoolean(value: any): boolean;
+        static TOBOOLEANOPTIONS: any;
 
     }
 }
@@ -13812,6 +14152,15 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
+        static MOUSE_TO_TOUCH_MAPPING: any;
         protected _onTouchEvent(domEvent: qx.event.type.Event): void;
 
     }
@@ -13823,6 +14172,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static IGNORE_CAN_HANDLE: any;
+        static FOCUSABLE_ELEMENTS: any;
         focus(element: qx.event.handler.Element): void;
         activate(element: qx.event.handler.Element): void;
         blur(element: qx.event.handler.Element): void;
@@ -13844,6 +14201,13 @@ declare module qx.event.handler {
     class PointerCore implements qx.core.IDisposable {
         dispose(): void;
         constructor(target?: HTMLElement, emitter?: qx.event.Emitter);
+        static MOUSE_TO_POINTER_MAPPING: any;
+        static TOUCH_TO_POINTER_MAPPING: any;
+        static MSPOINTER_TO_POINTER_MAPPING: any;
+        static POINTER_TO_GESTURE_MAPPING: any;
+        static LEFT_BUTTON: any;
+        static SIM_MOUSE_DISTANCE: any;
+        static SIM_MOUSE_DELAY: any;
         protected _initPointerObserver(): void;
         protected _initObserver(callback: Function, useEmitter: boolean): void;
         protected _onPointerEvent(domEvent: qx.event.type.Event): void;
@@ -13863,6 +14227,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         protected _onInterval(e: qx.event.type.Data): void;
         destruct(): void;
 
@@ -13870,17 +14242,33 @@ declare module qx.event.handler {
 }
 declare module qx.event.handler {
     class Input extends qx.core.Object implements qx.event.IEventHandler {
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
 
     }
 }
 declare module qx.event.handler {
     class Capture extends qx.core.Object implements qx.event.IEventHandler {
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
 
     }
 }
@@ -13891,6 +14279,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         protected _fireInputEvent(domEvent: qx.event.type.Event, charCode: number): qx.Promise | null;
         protected _fireSequenceEvent(domEvent: qx.event.type.Event, type: string, keyIdentifier: string): qx.Promise | null;
         protected _initKeyObserver(): void;
@@ -13903,9 +14299,17 @@ declare module qx.event.handler {
 }
 declare module qx.event.handler {
     class Object extends qx.core.Object implements qx.event.IEventHandler {
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
 
     }
 }
@@ -13915,6 +14319,14 @@ declare module qx.event.handler {
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         destruct(): void;
 
     }
@@ -13923,6 +14335,18 @@ declare module qx.event.handler {
     class GestureCore implements qx.core.IDisposable {
         dispose(): void;
         constructor(target?: HTMLElement, emitter?: qx.event.Emitter);
+        static TYPES: any;
+        static GESTURE_EVENTS: any;
+        static TAP_MAX_DISTANCE: any;
+        static DOUBLETAP_MAX_DISTANCE: any;
+        static SWIPE_DIRECTION: any;
+        static LONGTAP_TIME: any;
+        static DOUBLETAP_TIME: any;
+        static ROLL_FACTOR: any;
+        static TOUCHPAD_ROLL_FACTOR: any;
+        static TOUCHPAD_WHEEL_EVENTS_THRESHOLD: any;
+        static TOUCHPAD_WHEEL_EVENTS_PERIOD: any;
+        static TOUCHPAD_WHEEL_EVENTS_TIMEOUT: any;
         protected _initObserver(): void;
         protected _stopObserver(): void;
         checkAndFireGesture(domEvent: qx.event.type.Pointer, type?: string, target?: HTMLElement): void;
@@ -13946,17 +14370,34 @@ declare module qx.event.handler {
 }
 declare module qx.event.handler {
     class Iframe extends qx.core.Object implements qx.event.IEventHandler {
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
+        static onevent: any;
 
     }
 }
 declare module qx.event.handler {
     class Video extends qx.core.Object implements qx.event.IEventHandler {
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
 
     }
 }
@@ -13967,6 +14408,15 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static IGNORE_CAN_HANDLE: any;
+        static ALLOWED_BUTTONS: any;
+        static MIN_DRAG_DISTANCE: any;
         addType(type: string): void;
         addAction(action: string): void;
         supportsType(type: string): boolean;
@@ -14005,6 +14455,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         static onScriptLoaded(): void;
         static onAppInstanceInitialized(): void;
         isApplicationReady(): boolean;
@@ -14024,6 +14482,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         protected _initWindowObserver(): void;
         protected _stopWindowObserver(): void;
         protected _onNative(): void;
@@ -14038,6 +14504,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
 
     }
 }
@@ -14048,6 +14522,16 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static GESTURE_EVENTS: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
+        static EVENT_CLASSES: any;
         getWindow(): qx.event.handler.Window;
 
     }
@@ -14059,6 +14543,15 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static NON_BUBBLING_EVENTS: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         preventNextClick(): void;
         protected _initButtonObserver(): void;
         protected _initMoveObserver(): void;
@@ -14077,6 +14570,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         static refresh(): void;
         destruct(): void;
 
@@ -14089,6 +14590,15 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static CANCELABLE: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         destruct(): void;
 
     }
@@ -14111,6 +14621,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         protected _initObserver(): void;
         protected _stopObserver(): void;
         isOnline(): boolean;
@@ -14122,6 +14640,11 @@ declare module qx.event.handler {
     class TouchCore implements qx.core.IDisposable {
         dispose(): void;
         constructor(target?: HTMLElement, emitter?: qx.event.Emitter);
+        static TAP_MAX_DISTANCE: any;
+        static SWIPE_DIRECTION: any;
+        static SWIPE_MIN_DISTANCE: any;
+        static SWIPE_MIN_VELOCITY: any;
+        static LONGTAP_TIME: any;
         protected _initTouchObserver(): void;
         protected _stopTouchObserver(): void;
         protected _onTouchEvent(domEvent: qx.event.type.Event): void;
@@ -14144,6 +14667,16 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
+        static TYPE_TO_NATIVE: any;
+        static NATIVE_TO_TYPE: any;
         destruct(): void;
 
     }
@@ -14155,6 +14688,14 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
+        TARGET_DOMNODE: any;
+        TARGET_WINDOW: any;
+        TARGET_OBJECT: any;
+        TARGET_DOCUMENT: any;
+        static PRIORITY: any;
+        static SUPPORTED_TYPES: any;
+        static TARGET_CHECK: any;
+        static IGNORE_CAN_HANDLE: any;
         protected _initObserver(): void;
         protected _stopObserver(): void;
         protected _onOrientationChange(domEvent: qx.event.type.Event): void;
@@ -14216,6 +14757,13 @@ declare module qx.event {
 }
 declare module qx.event.util {
     class Keyboard {
+        static specialCharCodeMap: any;
+        static numpadToCharCode: any;
+        static keyCodeToIdentifierMap: any;
+        static charCodeA: any;
+        static charCodeZ: any;
+        static charCode0: any;
+        static charCode9: any;
         static keyCodeToIdentifier(keyCode: number): string;
         static charCodeToIdentifier(charCode: string): string;
         static isIdentifiableKeyCode(keyCode: string): boolean;
@@ -14227,12 +14775,14 @@ declare module qx.event.util {
 }
 declare module qx.event.dispatch {
     class DomBubbling extends qx.event.dispatch.AbstractBubbling {
+        static PRIORITY: any;
 
     }
 }
 declare module qx.event.dispatch {
     class MouseCapture extends qx.event.dispatch.AbstractBubbling {
         constructor(manager?: qx.event.Manager, registration?: qx.event.Registration);
+        static PRIORITY: any;
         activateCapture(element: HTMLElement, containerCapture?: boolean): void;
         getCaptureElement(): HTMLElement | null;
         releaseCapture(): void;
@@ -14244,6 +14794,7 @@ declare module qx.event.dispatch {
         canDispatchEvent(target: HTMLElement | qx.event.type.Event, event: qx.event.type.Event, type: string): boolean;
         dispatchEvent(target: HTMLElement | qx.event.type.Event, event: qx.event.type.Event, type: string): qx.Promise | null;
         constructor(manager?: qx.event.Manager);
+        static PRIORITY: any;
 
     }
 }
@@ -14279,6 +14830,10 @@ declare module qx.event {
         static fireEvent(target: {}, type: string, clazz?: qx.Class, args?: qx.data.Array): boolean | qx.Promise;
         static fireEventAsync(target: {}, type: string, clazz?: qx.Class, args?: qx.data.Array): qx.Promise;
         static fireNonBubblingEvent(target: {}, type: string, clazz?: qx.Class, args?: qx.data.Array): boolean;
+        static fireNonBubblingEventAsync: any;
+        static PRIORITY_FIRST: any;
+        static PRIORITY_NORMAL: any;
+        static PRIORITY_LAST: any;
         static addHandler(handler: qx.event.IEventHandler): void;
         static getHandlers(): qx.event.IEventHandler[];
         static addDispatcher(dispatcher: qx.event.IEventDispatcher, priority: number): void;
@@ -14439,6 +14994,9 @@ declare module qx.event.type {
 }
 declare module qx.event.type {
     class Event extends qx.core.Object {
+        static CAPTURING_PHASE: any;
+        static AT_TARGET: any;
+        static BUBBLING_PHASE: any;
         init(canBubble?: boolean, cancelable?: boolean): qx.event.type.Event;
         stop(): void;
         stopPropagation(): void;
@@ -14474,6 +15032,13 @@ declare module qx.event.type {
 }
 declare module qx.event.type {
     class Dom extends qx.event.type.Native {
+        static SHIFT_MASK: any;
+        static CTRL_MASK: any;
+        static ALT_MASK: any;
+        static META_MASK: any;
+        static CAPSLOCK_MASK: any;
+        static NUMLOCK_MASK: any;
+        static SCROLLLOCK_MASK: any;
         getModifiers(): number;
         getKeyLockState(): number;
         isCtrlPressed(): boolean;
@@ -14527,6 +15092,7 @@ declare module qx.event.type {
 declare module qx.event.type.dom {
     class Custom {
         constructor(type?: string, domEvent?: qx.event.type.Event, customProps?: IMap);
+        static PROPERTIES: any;
         protected _createEvent(): qx.event.type.Event;
         protected _initEvent(domEvent: qx.event.type.Event, customProps?: IMap): void;
 
@@ -14534,6 +15100,10 @@ declare module qx.event.type.dom {
 }
 declare module qx.event.type.dom {
     class Pointer extends qx.event.type.dom.Custom {
+        static MOUSE_PROPERTIES: any;
+        static POINTER_PROPERTIES: any;
+        static READONLY_PROPERTIES: any;
+        static BIND_METHODS: any;
         static getPointerType(): string;
         static getViewportLeft(): number;
         static getViewportTop(): number;
@@ -14633,9 +15203,13 @@ declare module qx.event.type {
 }
 declare module qx.event {
     class Utils extends qx.core.Object {
+        static ABORT: any;
+        static track: any;
+        static then: any;
         static reject(tracker: {}): qx.Promise | null;
         static catch(tracker: {}, fn: Function): void;
         static callListener(tracker: {}, listener: Function, context?: {}, event?: qx.event.type.Event): qx.Promise | null;
+        static series: any;
 
     }
 }
@@ -14695,20 +15269,32 @@ declare module qx {
         static flatten(mixins?: qx.Mixin[]): qx.data.Array;
         static baseClassMethod(clazz: qx.Class, mixin: qx.Mixin, methodName: string): Function;
         static genericToString(): string;
+        static $$registry: any;
 
     }
 }
 declare module qx {
     class Bootstrap {
+        static LOADSTART: any;
+        static DEBUG: any;
         static getEnvironmentSetting(key: string): any;
         static setEnvironmentSetting(key: string, value: any): void;
+        static createNamespace: any;
         static setRoot(root: {}): void;
+        static base: any;
+        static define: any;
+        static isQxCoreObject: any;
+        static setDisplayName: any;
+        static setDisplayNames: any;
+        static genericToString: any;
         static extendClass(clazz: Function, construct: Function, superClass: Function, name: Function, basename: Function): void;
         static addPendingDefer(clazz: qx.Class, cb: Function): void;
         static executePendingDefers(dbClassInfo: {}): void;
         static getByName(name: string): qx.Class;
+        static $$registry: any;
         static objectGetLength(map: {}): number;
         static objectMergeWith(target: {}, source: {}, overwrite?: boolean): {};
+        static keys: any;
         static bind(func: Function, self?: {}, ...varargs: any[]): Function;
         static firstUp(str: string): string;
         static firstLow(str: string): string;
@@ -14718,6 +15304,7 @@ declare module qx {
         static isObject(value: any): boolean;
         static isFunction(value: any): boolean;
         static isFunctionOrAsyncFunction(value: any): boolean;
+        static $$logs: any;
         static debug(object: {}, message: any): void;
         static info(object: {}, message: any): void;
         static warn(object: {}, message: any): void;
