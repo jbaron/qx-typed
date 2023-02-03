@@ -1,4 +1,4 @@
-// Generated declaration file at Mon Jan 30 2023 09:30:16 GMT+0100 (Central European Standard Time)
+// Generated declaration file at Mon Jan 30 2023 12:21:09 GMT+0100 (Central European Standard Time)
 
 interface IMap {
     [key: string]: any;
@@ -2839,7 +2839,7 @@ declare module qx.ui.core {
         setZIndex(value: number): void;
         resetZIndex(): void;
         getDecorator(): qx.ui.decoration.Decorator;
-        setDecorator(value: qx.ui.decoration.Decorator): void;
+        setDecorator(value: qx.ui.decoration.Decorator | string): void;
         resetDecorator(): void;
         getBackgroundColor(): string;
         setBackgroundColor(value: string): void;
@@ -3361,10 +3361,6 @@ declare module qx.ui.core {
 }
 declare module qx.ui.core {
     class EventHandler extends qx.core.Object implements qx.event.IEventHandler {
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
@@ -6837,10 +6833,6 @@ declare module qx.ui.mobile.core {
 }
 declare module qx.ui.mobile.core {
     class EventHandler extends qx.core.Object implements qx.event.IEventHandler {
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
@@ -6883,10 +6875,6 @@ declare module qx.ui.mobile.core {
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static IGNORE_CAN_HANDLE: any;
@@ -14152,10 +14140,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14172,10 +14156,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static IGNORE_CAN_HANDLE: any;
@@ -14227,10 +14207,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14242,10 +14218,6 @@ declare module qx.event.handler {
 }
 declare module qx.event.handler {
     class Input extends qx.core.Object implements qx.event.IEventHandler {
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
@@ -14258,10 +14230,6 @@ declare module qx.event.handler {
 }
 declare module qx.event.handler {
     class Capture extends qx.core.Object implements qx.event.IEventHandler {
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
@@ -14279,10 +14247,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14299,10 +14263,6 @@ declare module qx.event.handler {
 }
 declare module qx.event.handler {
     class Object extends qx.core.Object implements qx.event.IEventHandler {
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
@@ -14319,10 +14279,6 @@ declare module qx.event.handler {
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14370,10 +14326,6 @@ declare module qx.event.handler {
 }
 declare module qx.event.handler {
     class Iframe extends qx.core.Object implements qx.event.IEventHandler {
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
@@ -14387,10 +14339,6 @@ declare module qx.event.handler {
 }
 declare module qx.event.handler {
     class Video extends qx.core.Object implements qx.event.IEventHandler {
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         canHandleEvent(target: any, type: string): boolean;
         registerEvent(target: any, type: string, capture: boolean): void;
         unregisterEvent(target: any, type: string, capture: boolean): void;
@@ -14408,10 +14356,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static IGNORE_CAN_HANDLE: any;
@@ -14455,10 +14399,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14482,10 +14422,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14504,10 +14440,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14522,10 +14454,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static GESTURE_EVENTS: any;
@@ -14543,10 +14471,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static NON_BUBBLING_EVENTS: any;
@@ -14570,10 +14494,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14590,10 +14510,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static CANCELABLE: any;
@@ -14621,10 +14537,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14667,10 +14579,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;
@@ -14688,10 +14596,6 @@ declare module qx.event.handler {
         unregisterEvent(target: any, type: string, capture: boolean): void;
         dispose(): void;
         constructor(manager?: qx.event.Manager);
-        TARGET_DOMNODE: any;
-        TARGET_WINDOW: any;
-        TARGET_OBJECT: any;
-        TARGET_DOCUMENT: any;
         static PRIORITY: any;
         static SUPPORTED_TYPES: any;
         static TARGET_CHECK: any;

@@ -11,7 +11,7 @@ class FormPage extends MyPage {
         const form = new qx.ui.form.Form()
         this.addSection1(form)
         this.addSection2(form)
-    
+
         // send button with validation
         const sendButton = new qx.ui.form.Button("Send")
         sendButton.addListener("execute", function () {
@@ -44,16 +44,16 @@ class FormPage extends MyPage {
     }
 
     addSection2(form: qx.ui.form.Form) {
-          // add the second header
-          form.addGroupHeader("Personal Information")
-          form.add(new qx.ui.form.Spinner(0, 50, 100), "Age")
-          form.add(new qx.ui.form.TextField(), "Country")
-          const genderBox = new qx.ui.form.SelectBox()
-          genderBox.add(new qx.ui.form.ListItem("Man"))
-          genderBox.add(new qx.ui.form.ListItem("Woman"))
-          genderBox.add(new qx.ui.form.ListItem("Genderqueer/Non-Binary"))
-          genderBox.add(new qx.ui.form.ListItem("Prefer not to disclose"))
-          form.add(genderBox, "Gender")
-          form.add(new qx.ui.form.TextArea(), "Bio")
+        // add the second header
+        form.addGroupHeader("Personal Information")
+        form.add(new qx.ui.form.Spinner(0, 50, 100), "Age")
+        form.add(new qx.ui.form.TextField(), "Country")
+        const genderBox = new qx.ui.form.SelectBox()
+        genderBox.add(new qx.ui.form.ListItem("Man"))
+        genderBox.add(new qx.ui.form.ListItem("Woman"))
+        genderBox.add(new qx.ui.form.ListItem("Genderqueer/Non-Binary"))
+        genderBox.add(new qx.ui.form.ListItem("Prefer not to disclose"))
+        form.add(genderBox, "Gender")
+        form.add(new qx.ui.form.TextArea(), "Bio")
     }
 }

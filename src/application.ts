@@ -1,20 +1,20 @@
 
 /**
  * Example of extending an qooxdoo class
- */ 
+ */
 class MyPage extends qx.ui.tabview.Page {
     constructor(name: string) {
         super(name)
         this.setLayout(new qx.ui.layout.Canvas())
         this.setShowCloseButton(true)
-    }   
+    }
 }
 
 /**
  * This is the main function that will be called from the qooxdoo application to start everything.
- */ 
+ */
 function qooxdooMain(app: qx.application.Standalone) {
- 
+
     const t = new qx.ui.tabview.TabView();
     t.add(new ButtonsPage())
     t.add(new FormPage())
@@ -23,9 +23,10 @@ function qooxdooMain(app: qx.application.Standalone) {
     t.add(new ToolBarPage())
     t.add(new WindowsPage())
 
+
     // add the tabview to the root
     const root = <qx.ui.container.Composite>app.getRoot()
-    root.add(t,{edge: 0})
+    root.add(t, { edge: 0 })
 }
 
 // register the main function

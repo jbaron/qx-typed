@@ -3,8 +3,10 @@
 import Button = qx.ui.form.Button
 
 
+
+
 class ButtonsPage extends MyPage {
- 
+
     constructor() {
         super("Buttons")
         const button1 = new Button("Hello", "resource/app/internet-web-browser.png")
@@ -13,10 +15,10 @@ class ButtonsPage extends MyPage {
         const button4 = new Button("Change layout", "@MaterialIcons/face") // use an icon font
 
         const meta = qx.theme.manager.Meta.getInstance()
-        button1.addListener("execute", function() { alert("Hello World!") })
-        button2.addListener("execute", function() { meta.setTheme(qx.theme.TangibleDark) })
-        button3.addListener("execute", function() { meta.setTheme(qx.theme.TangibleLight) })
-        button4.addListener("execute", function() {
+        button1.addListener("execute", function () { alert("Hello World!") })
+        button2.addListener("execute", function () { meta.setTheme(qx.theme.TangibleDark) })
+        button3.addListener("execute", function () { meta.setTheme(qx.theme.TangibleLight) })
+        button4.addListener("execute", function () {
             container.getLayout() == layout1 ? container.setLayout(layout2) : container.setLayout(layout1)
         });
 
