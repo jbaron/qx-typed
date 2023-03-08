@@ -6,7 +6,7 @@ class FormPage extends MyPage {
 
 
     constructor() {
-        super("form")
+        super("Form")
 
         const form = new qx.ui.form.Form()
         this.addSection1(form)

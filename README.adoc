@@ -30,6 +30,31 @@ tsc
 npx http-server
 ----
 
+
+== Tips & Tricks
+There might be a cases where the declaration file doesn't cover all possible use cases, typically because qooxdoo doesn't always follow sound OO principles. 
+But if you encounter such scenario, it is easy to work around them:
+
+----
+// Produces error because c() is unknown
+const x = a.b().c() 
+
+// Work around
+const b = a.b() as any
+b.c()
+----
+
+
+If you don't want to enter the fully qualified name, you can import it:
+
+----
+import Button = qx.ui.form.Button
+const b1 = Button("label 1")
+const b2 = Button("label 2")
+const b3 = Button("label 2")
+----
+
+
 == License
 This application uses much of qooxdoo and for those part the same license applies as qooxdoo. So either LGPL or EPL.
 See also qooxdoo.org for more details.

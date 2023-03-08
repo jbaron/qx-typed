@@ -1,7 +1,7 @@
 class TablePage extends MyPage {
 
   constructor() {
-    super("table")
+    super("Table")
     const table = this.createTable()
     table.setFocusedCell(2, 5)
     this.add(table)
