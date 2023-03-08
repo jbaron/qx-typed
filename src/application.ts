@@ -22,6 +22,7 @@ function qooxdooMain(app: qx.application.Standalone) {
     t.add(createTree()) // example using function instead of class
     t.add(new ToolBarPage())
     t.add(new WindowsPage())
+    t.add(new ControlPage())
 
 
     // add the tabview to the root
